@@ -1,0 +1,208 @@
+
+@font-face {
+    font-family: 'AppleGaramond-Light';
+    src: url('fontes/AppleGaramond-Light.ttf') format('truetype'); /* Substitua pelo caminho real do seu arquivo de fonte */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 315vh;
+    margin: 0;
+}
+
+.nav-list li a {
+    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-weight: 500;
+    opacity: 0.60;
+    color: rgba(228, 222, 255, 0.878);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-list li a:hover {
+    opacity: 5;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    margin-left: 30px;
+    width: 200px; /* Ajuste a largura conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+header{
+    background-color: rgba(46, 46, 46, 0.25);
+    font-size: 17px;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    transition: .5s;
+}
+
+header.rolagem{
+    background-color: #FFF;
+    padding: 7px 4%;
+    width: 91vw;
+    position: fixed;
+}
+
+header.rolagem a{
+    color: rgba(0,0,0);
+    font-family: 'AppleGaramond-Light', sans-serif;
+}
+
+header ul{
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+header ul li{
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header ul li a {
+    opacity: 0.60;
+    color: #fff;
+    text-decoration: none;
+}
+
+header ul li a:hover{
+    opacity: 5;
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+
+.banner background-video{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99.9vh;
+    background-color: rgba(0, 0, 0, 0.4); /* Ajuste a opacidade aqui */
+    z-index: 1; /* Certifique-se de que a camada esteja acima do vídeo e abaixo do conteúdo do banner */
+}
+
+.banner{
+    max-height: 100vh;
+    margin-bottom: 0px;
+}
+
+.banner-content{
+    width: 22%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    text-align: left;
+    z-index: 2;
+}
+
+.banner h1{
+    position: relative;
+    color: rgba(240, 238, 253, 0.889);
+    text-shadow: 0px 6px 10px rgba(255, 167, 64, 0.20);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+/*linhas do texto */
+.banner h1 .linha::after {
+    content: ""; /* Adiciona conteúdo à pseudo-elemento ::after */
+    left: 0%; /* Posiciona a linha no centro */
+    width: 140px; /* Ajusta a largura da linha */
+    height: 0.65px; /* Ajusta a altura da linha */
+    background-color: rgba(255, 255, 255, 1); /* Cor da linha decorativa */
+    transform: translateX(20%); /* Centraliza a linha horizontalmente */
+    display: block;
+}
+
+/*linhas do texto */
+.banner h1 {
+    position: relative;
+    padding-left: 12px; /* Ajuste conforme necessário para a largura da linha de margem */
+    /* ... Outras propriedades ... */
+}
+
+/*linhas do texto */
+.banner h1::before {
+    content: ""; /* Adiciona conteúdo à pseudo-elemento ::before */
+    position: absolute;
+    left: 0;
+    width: 2px; /* Ajuste a largura da linha vertical */
+    height: 93%; /* Faz com que a linha tenha a altura total do elemento pai */
+    background-color: #FFF; /* Cor da linha de margem */
+    transform: translateY(4%); /* Centraliza a linha verticalmente */
+
+}
+
+/*linhas do texto */
+.banner h1 .linha2::after {
+    content: ""; /* Adiciona conteúdo à pseudo-elemento ::after */
+    left: 0%; /* Posiciona a linha no centro */
+    width: 140px; /* Ajusta a largura da linha */
+    height: 0.65px; /* Ajusta a altura da linha */
+    background-color: rgba(255, 255, 255, 1); /* Cor da linha decorativa */
+    transform: translateX(100%); /* Centraliza a linha horizontalmente */
+    display: block;
+}
+
+conteudo {
+    padding: 15px;
+    align-items: center;
+    
+}

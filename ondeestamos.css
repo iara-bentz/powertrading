@@ -1,0 +1,94 @@
+
+@font-face {
+    font-family: 'AppleGaramond-Light';
+    src: url('fontes/AppleGaramond-Light.ttf') format('truetype'); /* Substitua pelo caminho real do seu arquivo de fonte */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 315vh;
+    margin: 0;
+}
+
+.nav-list li a {
+    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-weight: 500;
+    opacity: 0.60;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-list li a:hover {
+    opacity: 5;
+}
+
+
+*{
+    background-color: rgba(255, 250, 250, 0.25);
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    margin-left: 30px;
+    width: 200px; /* Ajuste a largura conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+header{
+    font-size: 17px;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    transition: .5s;
+}
+
+header.rolagem{
+    background-color: #FFF;
+    padding: 7px 4%;
+    width: 91vw;
+    position: fixed;
+}
+
+header.rolagem a{
+    color: rgba(0,0,0);
+    font-family: 'AppleGaramond-Light', sans-serif;
+}
+
+header ul{
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+header ul li{
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header ul li a {
+    opacity: 0.60;
+    color: #fff;
+    text-decoration: none;
+}
+
+header ul li a:hover{
+    opacity: 5;
+}

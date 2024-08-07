@@ -1,0 +1,320 @@
+body{
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 315vh;
+    margin: 0;
+}
+
+.nav-list li a {
+    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-weight: 500;
+    opacity: 0.60;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-list li a:hover {
+    opacity: 5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    margin-left: 30px;
+    width: 200px; /* Ajuste a largura conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+header{
+    font-size: 17px;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    transition: .5s;
+}
+
+header.rolagem{
+    background-color: #FFF;
+    padding: 7px 4%;
+    width: 91vw;
+    position: fixed;
+}
+
+
+header ul{
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+header ul li{
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header ul li a {
+    opacity: 0.60;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.content {
+    display: flex;
+    align-items: center;
+    min-height:100vh; /* Altere esta linha */
+    flex-direction: column;
+}
+
+.black-bar {
+    z-index: 2;
+    font-size: 12px;
+    font-family: 'Open Sans',  sans-serif;
+    font-weight: 400px;
+    margin: 0;
+    width: 100vw;
+    background-color: #000;
+    color: #fff;
+    padding: 5px 0; /* Ajuste conforme necessário */
+    text-align: center;
+    left: 0;
+    margin-left: 0;
+}
+
+.blue-rectangle {
+    position: relative;
+    display: flex;
+    box-shadow: 0 29px 100px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 55px 55px; /* Os dois últimos valores controlam os cantos inferiores */
+    width: 950px; /* Largura de 100% da largura da tela */
+    height: 300px; /* Altura do retângulo, ajuste conforme necessário */
+    background-color: #3498db; /* Cor azul, ajuste conforme necessário */
+    z-index: 0;
+}
+
+
+.text-box {
+    flex-direction: column;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.paragrafo1 {
+    width: 55%;
+    color: #FFFDFD;
+    text-shadow: 0px 4px 18px rgba(136, 10, 117, 0.43);
+    font-family:  'Open Sans',  sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.50px;
+    padding-top: 35px
+}
+.paragrafo2 {
+    width: 55%;
+    color: #FFFDFD;
+    text-shadow: 0px 4px 18px rgba(10, 76, 136, 0.83);
+    font-family:  'Open Sans',  sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.50px;
+    padding-top: 15px;
+}
+
+.box {
+    display: flex;
+    width: 930px;
+    display: flex;
+}
+
+.form-box {
+    align-items: center;
+    height: 630px;
+    width: 40%;
+    background: linear-gradient(180deg, rgba(231, 180, 255, 0.56) 12.37%, rgba(255, 255, 255, 0.49) 51.02%, rgba(226, 166, 255, 0.13) 88.88%);
+    box-shadow: 0px 3px 149px 0px rgba(0, 0, 0, 0.23);
+    backdrop-filter: blur(10px);
+    border-radius:  0;
+    box-shadow: 0px 29px 100px 0px rgba(0, 0, 0, 0.25);
+}
+
+.form-box form{
+    margin: 27px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-box p {
+    align-self: center;
+    width: 80%;
+    color: #000;
+    font-family: 'Open Sans';
+    font-size: 11.5px;
+    font-weight: 350;
+    letter-spacing: 0.10px;
+}
+
+form .input-group {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+form .input-group input {
+    width: 80%;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 15px;
+    font-family: 'Segoe UI', serif;
+    font-size: 13px;
+    transition: all 0.4s ease;
+    color: rgba(0, 0, 0, 0.50);
+}
+
+form .input-group input:focus {
+    border-color: #3586ff;
+}
+
+form .input-group button {
+    width: 80%;
+    height: 47px;
+    background: #428BC1;
+    border-radius: 4px;
+    border-color: transparent;
+    outline: none;
+    margin-top: 15px;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0px 4px 29px 0px rgba(0, 0, 0, 0.34);
+}
+
+@media (max-width:930px) {
+    .text-box{
+        display: flex;
+    }
+}
+
+.video-container {
+    padding-left: 80px;
+    padding: 50px 50px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.video-container video {
+    border-radius: 12px;
+    box-shadow: 3px 6px 26px 0px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    width: 100vw;
+    background: #000000;
+    color: #fff;
+    padding: 40px 0; /* Espaçamento interno */
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+    position: relative; /* Necessário para o alinhamento adequado */
+}
+
+.row {
+    max-width: 1200px; /* Limita a largura do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    display: flex;
+    flex-wrap: wrap; /* Permite que as colunas quebrem para a linha seguinte se necessário */
+    justify-content: space-between; /* Espaça as colunas igualmente */
+}
+
+.col {
+    flex: 1 1 250px; /* Faz com que as colunas se ajustem responsivamente */
+    padding: 10px;
+    box-sizing: border-box; /* Inclui padding e border no tamanho total do elemento */
+}
+
+
+.footer-tagline {
+    padding-top: 20px;
+    padding-left: 0px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.15px;
+    font-weight: 500;
+    color: #f77a48;
+    margin-top: 0;
+}
+
+.logo {
+    padding: 0;
+    width: 220px;
+}
+
+.iso {
+    width: 150px;
+    padding-left: 20px;
+}
+
+.col h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding-bottom: 10px; /* Espaço abaixo do título */
+    border-bottom: 0.10px solid #fff; /* Linha separadora */
+}
+
+.email-id {
+    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-weight: 300;
+    margin: 10px 0;
+    color: #fff;
+}
+p {
+    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-weight: 350px;
+}
+
+
+ul {
+    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-weight: 350px;
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+ul li a:hover {
+    color: #ff7700; /* Cor de destaque no hover */
+}

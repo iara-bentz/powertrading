@@ -6,18 +6,23 @@
     font-style: normal;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body{
     flex-direction: column;
     width: 100%;
-    display: flex;
+    display:flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 315vh;
     margin: 0;
 }
 
 .nav-list li a {
-    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-family: "Open Sans", sans-serif; 
     font-weight: 500;
     opacity: 0.60;
     color: rgba(228, 222, 255, 0.878);
@@ -30,11 +35,12 @@ body{
 }
 
 
-*{
+* {
     margin: 0;
-    padding: 0;
     scroll-behavior: smooth;
 }
+
+
 
 
 .flex{
@@ -115,7 +121,7 @@ header ul li a:hover{
 }
 
 
-.banner background-video{
+.banner back-video{
     left: 0;
     right: 0;
     top: 0;
@@ -128,36 +134,87 @@ header ul li a:hover{
     top: 0;
     left: 0;
     width: 100%;
-    height: 99.9vh;
-    background-color: rgba(0, 0, 0, 0.4); /* Ajuste a opacidade aqui */
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.079)); 
     z-index: 1; /* Certifique-se de que a camada esteja acima do vídeo e abaixo do conteúdo do banner */
 }
 
-.banner{
-    max-height: 100vh;
+section .banner{   
+    position: relative
+    width: 100vw;
+    min-height: 100vh;
     margin-bottom: 0px;
 }
 
-.banner-content{
-    width: 22%;
+.banner-content {
+    width: 35%;
     position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    align-items: center;
-    text-align: left;
+    top: 150px; /* Ajusta a posição do topo */
+    left: 0; /* Alinha à esquerda */
+    padding-top: 10px; 
+    padding-left: 70px;
+    text-align: left; /* Alinha o texto à esquerda */
     z-index: 2;
 }
 
 .banner h1{
     position: relative;
-    color: rgba(240, 238, 253, 0.889);
+    color: rgba(255, 255, 255, 0.889);
     text-shadow: 0px 6px 10px rgba(255, 167, 64, 0.20);
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-style: normal;;
     font-size: 30px;
     line-height: 1.2;
+}
+
+.newsletter-content p {
+    color: #fff;
+    font-family: "Rubik", sans-serif;
+    padding: 8px;
+}
+
+.newsletter-content form {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Ajuste o espaçamento entre o input e o botão */
+}
+
+.newsletter-content input[type="email"] {
+    padding: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    border: 0px solid #ddd;
+    border-radius: 4px; /* Cantos arredondados do input */
+    width: 300px; /* Ajuste a largura conforme necessário */
+    background-color: #d9d7d7;
+}
+
+.newsletter-content button {
+    padding: 10px 20px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #d65c33; /* Cor do fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter-content button:hover {
+    background-color: #ff7104; /* Cor do botão ao passar o mouse */
+}
+
+.newsletter-content .material-symbols-outlined {
+    font-size: 24px; /* Ajuste o tamanho do ícone */
+    color: #fff; /* Cor do ícone dentro do botão */
+}
+
+.newsletter button:hover {
+    background-color: #ff7104; /* Cor do botão ao passar o mouse */
 }
 
 /*linhas do texto */
@@ -183,8 +240,8 @@ header ul li a:hover{
     content: ""; /* Adiciona conteúdo à pseudo-elemento ::before */
     position: absolute;
     left: 0;
-    width: 2px; /* Ajuste a largura da linha vertical */
-    height: 93%; /* Faz com que a linha tenha a altura total do elemento pai */
+    width: 1px; /* Ajuste a largura da linha vertical */
+    height: 116%; /* Faz com que a linha tenha a altura total do elemento pai */
     background-color: #FFF; /* Cor da linha de margem */
     transform: translateY(4%); /* Centraliza a linha verticalmente */
 
@@ -201,8 +258,205 @@ header ul li a:hover{
     display: block;
 }
 
+.cards-container {
+    height: ;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.card {
+    width: 150px;
+    height: 120px;
+    padding: 20px;
+    border: 0px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); 
+    position: relative; /* nao tirar */
+    background-color: #ffffff;
+    z-index: 3;
+    margin-top: 120px;
+}
+
+
+.card::before {
+    content: ""; 
+    position: absolute; 
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 6px; 
+    background-color: #d65c33; 
+}
+
+.card h3 {
+    margin-top: 0;
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    color: #514A4A;
+    text-align: center;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 20
+}
+
+.emoji {
+    width: 100px;
+    color: #d65c33;
+    align-items: center;
+    display: block
+}
+
+.emoji .material-symbols-outlined {
+    align-items: center;
+}
+
+
+
 conteudo {
     padding: 15px;
     align-items: center;
-    
+    justify-content: center;
 }
+
+section .map {
+    width: 100vw;
+}
+
+section .map img {
+    width: 600px;
+}
+
+section .map-text {
+    padding-bottom: 60px;
+}
+
+.map-content {
+    background: linear-gradient(to bottom, #FFFFFF, #DCD5CD);
+    height: 600px;
+    margin-bottom: 0;
+}
+
+.map-content .map {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+.map-text {
+    text-align: center;
+}
+
+.map-text h2 {
+    width: 35%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.globo {
+    margin-top: 0;
+    height: 400px;
+    background: linear-gradient(to bottom, #DCD5CD, #E6CEC2);
+}
+
+
+
+
+footer {
+    width: 100vw;
+    background: #000000;
+    color: #fff;
+    padding: 40px 0; /* Espaçamento interno */
+    font-size: 13px;
+    line-height: 20px;
+    position: relative; /* Necessário para o alinhamento adequado */
+}
+
+.row {
+    max-width: 1200px; /* Limita a largura do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    display: flex;
+    flex-wrap: wrap; /* Permite que as colunas quebrem para a linha seguinte se necessário */
+    justify-content: space-between; /* Espaça as colunas igualmente */
+}
+
+.col {
+    flex: 1 1 250px; /* Faz com que as colunas se ajustem responsivamente */
+    padding: 10px;
+    box-sizing: border-box; /* Inclui padding e border no tamanho total do elemento */
+}
+
+
+.footer-tagline {
+    padding-top: 20px;
+    padding-left: 0px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.15px;
+    font-weight: 500;
+    color: #f77a48;
+    margin-top: 0;
+}
+
+.logo {
+    padding: 0;
+    width: 220px;
+}
+
+.iso {
+    width: 150px;
+    padding-left: 20px;
+}
+
+.col h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding-bottom: 10px; /* Espaço abaixo do título */
+    border-bottom: 0.10px solid #fff; /* Linha separadora */
+}
+
+.email-id {
+    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-weight: 300;
+    margin: 10px 0;
+    color: #fff;
+}
+p {
+    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-weight: 350px;
+}
+
+
+ul {
+    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-weight: 350px;
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+ul li a:hover {
+    color: #ff7700; /* Cor de destaque no hover */
+}
+

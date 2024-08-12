@@ -3,7 +3,6 @@ body{
     width: 100%;
     display: flex;
     align-items: center;
-    min-height: 315vh;
     margin: 0;
 }
 
@@ -78,15 +77,15 @@ header ul li a {
 .content {
     display: flex;
     align-items: center;
-    min-height:100vh; /* Altere esta linha */
+    min-height: 100vh; /* Altere esta linha */
     flex-direction: column;
 }
 
 .black-bar {
     z-index: 2;
-    font-size: 12px;
+    font-size: 14px;
     font-family: 'Open Sans',  sans-serif;
-    font-weight: 400px;
+    font-weight: 490px;
     margin: 0;
     width: 100vw;
     background-color: #000;
@@ -122,7 +121,7 @@ header ul li a {
     text-shadow: 0px 4px 18px rgba(136, 10, 117, 0.43);
     font-family:  'Open Sans',  sans-serif;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.50px;
     padding-top: 35px
 }
@@ -131,9 +130,9 @@ header ul li a {
     color: #FFFDFD;
     text-shadow: 0px 4px 18px rgba(10, 76, 136, 0.83);
     font-family:  'Open Sans',  sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 750;
     letter-spacing: 0.50px;
     padding-top: 15px;
 }
@@ -233,7 +232,7 @@ footer {
     background: #000000;
     color: #fff;
     padding: 40px 0; /* Espaçamento interno */
-    border-top-left-radius: 125px;
+    border-top-left-: 125px;
     font-size: 13px;
     line-height: 20px;
     position: relative; /* Necessário para o alinhamento adequado */

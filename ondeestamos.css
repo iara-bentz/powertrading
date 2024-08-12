@@ -12,7 +12,6 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 315vh;
     margin: 0;
 }
 

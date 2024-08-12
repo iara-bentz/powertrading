@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'AppleGaramond-Light';
     src: url('fontes/AppleGaramond-Light.ttf') format('truetype'); /* Substitua pelo caminho real do seu arquivo de fonte */
@@ -6,18 +5,23 @@
     font-style: normal;
 }
 
+html, body {
+    height: 100%; /* Garante que o body ocupe toda a altura da tela */
+    margin: 0;
+    padding: 0;
+}
+
 body{
     flex-direction: column;
     width: 100%;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    min-height: 315vh;
     margin: 0;
 }
 
 .nav-list li a {
-    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-family: "Open Sans", sans-serif; 
     font-weight: 500;
     opacity: 0.60;
     color: rgb(0, 0, 0);
@@ -31,9 +35,6 @@ body{
 
 
 *{
-    background-color: rgba(255, 250, 250, 0.25);
-    margin: 0;
-    padding: 0;
     scroll-behavior: smooth;
 }
 
@@ -91,4 +92,260 @@ header ul li a {
 
 header ul li a:hover{
     opacity: 5;
+}
+
+
+
+.main {
+    position: relative;
+    padding-bottom: 100px; /* altura do rodapé */
+    align-items: center;
+}
+
+.capa {
+    position: absolute;
+    position: relative;
+    width: 100vw;
+    height: 29vh;
+}
+
+.capa img {
+    width: 100vw;
+    position: absolute;
+}
+
+.capa label {
+    position: absolute;
+    top: 150px;
+    font-style: normal;
+    font-weight: 800;
+    font-family: "Open Sans", sans-serif; 
+    font-size: 32px;
+    padding-left: 60px;
+    color: #fff;
+}
+
+.conteudo {
+    border-top: 3px solid #FF6F3D;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    margin-top: 5vh; /* Ajuste conforme necessário para garantir que a `conteudo` comece abaixo da capa */
+    background-color: #fff;
+    position: relative;
+    min-height: calc(100vh - 40px);
+    overflow: auto;
+}
+
+
+.texto-operações {
+    width: 70vw;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center; 
+    gap: 90px;
+    margin: 0 auto;
+    margin-bottom: 50px; /* Adiciona espaço abaixo do texto para os cards */
+
+}
+
+
+.texto-operações h2, .texto-operações p {
+    width: auto; 
+    display: inline-block; 
+}
+
+
+
+.texto-operações h2 {
+    font-family: "Open Sans", sans-serif; 
+    font-size: 18px;
+    font-weight: 700;
+    color: #4d4d4d;
+    text-align: left; 
+}
+
+.texto-operações p {
+    font-family: "Open Sans", sans-serif; 
+    font-size: 16px;
+    color: #363636;
+    text-align: left; 
+}
+
+
+.cards-container {
+    padding-bottom: 60px;
+    font-family: "Open Sans", sans-serif; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 50px; /* Adicione um margin-top para dar espaço extra se necessário */
+}
+
+
+.card {
+    background-color: #f5f5f5; /* Cor de fundo dos cards */
+    border: 1px solid #ddd; /* Borda dos cards */
+    border-radius: 8px; /* Borda arredondada */
+    padding: 20px;
+    width: calc(22% - 40px); /* Reduzido o width dos cards */
+    box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura */
+    text-align: center; /* Centraliza o texto dentro dos cards */
+    position: relative; /* Necessário para o posicionamento absoluto do h2 */
+    
+}
+
+.cards-container h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 40px); /* Ajusta para 2 cards por linha */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 40px); /* Ajusta para 1 card por linha */
+    }
+}
+
+.exportações h2 {
+    font-family: "Open Sans", sans-serif; 
+    font-size: 18px;
+    font-weight: 700;
+    color: #4d4d4d;
+    text-align: left; 
+}
+
+
+.cards-exportações {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+.cards-exportações img {
+    align-items: center;
+}
+
+.exportações .card h2 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+
+footer {
+    width: 100vw;
+    background: #000000;
+    color: #fff;
+    padding: 40px 0; /* Espaçamento interno */
+    border-top-left-: 125px;
+    font-size: 13px;
+    line-height: 20px;
+    position: relative; /* Necessário para o alinhamento adequado */
+}
+
+
+.row {
+    max-width: 1200px; /* Limita a largura do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    display: flex;
+    flex-wrap: wrap; /* Permite que as colunas quebrem para a linha seguinte se necessário */
+    justify-content: space-between; /* Espaça as colunas igualmente */
+}
+
+.col {
+    flex: 1 1 250px; /* Faz com que as colunas se ajustem responsivamente */
+    padding: 10px;
+    box-sizing: border-box; /* Inclui padding e border no tamanho total do elemento */
+}
+
+
+.footer-tagline {
+    padding-top: 20px;
+    padding-left: 0px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.15px;
+    font-weight: 500;
+    color: #f77a48;
+    margin-top: 0;
+}
+
+.logo {
+    padding: 0;
+    width: 220px;
+}
+
+.iso {
+    width: 150px;
+    padding-left: 20px;
+}
+
+.col h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding-bottom: 10px; /* Espaço abaixo do título */
+    border-bottom: 0.10px solid #fff; /* Linha separadora */
+}
+
+.email-id {
+    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-weight: 300;
+    margin: 10px 0;
+    color: #fff;
+}
+p {
+    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-weight: 350px;
+}
+
+
+ul {
+    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-weight: 350px;
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+ul li a:hover {
+    color: #ff7700; /* Cor de destaque no hover */
 }

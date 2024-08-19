@@ -263,7 +263,6 @@ footer {
     background: #000000;
     color: #fff;
     padding: 40px 0; /* Espaçamento interno */
-    border-top-left-: 125px;
     font-size: 13px;
     line-height: 20px;
     position: relative; /* Necessário para o alinhamento adequado */

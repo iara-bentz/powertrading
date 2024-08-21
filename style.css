@@ -124,10 +124,40 @@ body{
     }
 
     .logo img {
-        width: 20vw; /* Aumenta a responsividade para telas menores */
-        max-width: 100px; /* Ajuste o máximo para telas pequenas */
+        width: max-content; /* Aumenta a responsividade para telas menores */
+        max-width: 150px; /* Ajuste o máximo para telas pequenas */
+    }
+
+    .banner .content-h1-newsletter h1 {
+        width: 60vw;
+        font-size: 28px;
+    }
+
+    .circles-container {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os itens quebrem linha */
+        justify-content: space-between; /* Centraliza os itens horizontalmente */
+        width: 100%; /* Garante que o container ocupe toda a largura disponível */
+        padding: 10px; /* Adiciona algum padding para evitar que o conteúdo fique colado às bordas */
+    }
+
+    .circles-container .circle-item {
+        gap: 0.5;
+        width: 60px;
+        margin: 3px; /* Adiciona algum espaço entre os itens */
+    }
+
+    .circles-container .circle-item p {
+        font-size: 12px;
+        width: 35vw;
+    }
+
+    .circles-container .circle-item .circle {
+        width: 30px;
+        height: 30px;
     }
 }
+
 
 .back-video {
     position: absolute;
@@ -140,6 +170,10 @@ body{
     .back-video {
         width: 100%;
         height: auto;
+    }
+
+    .map-text h2 {
+        font-size: 20px;
     }
 }
 
@@ -191,12 +225,13 @@ section .banner{
 }
 
 .banner h1{
+    padding-top: 40px;
     position: relative;
     color: rgba(255, 255, 255, 0.889);
     font-family: "Work Sans", system-ui;
     font-weight: 600;
     font-style: normal;;
-    font-size: 65px;
+    font-size: 60px;
     line-height: 1;
 }
 
@@ -213,7 +248,7 @@ section .banner{
     position: absolute;
     left: 0;
     width: 3px; /* Ajuste a largura da linha vertical */
-    height: 93%; /* Faz com que a linha tenha a altura total do elemento pai */
+    height: 75%; /* Faz com que a linha tenha a altura total do elemento pai */
     background-color: #FFF; /* Cor da linha de margem */
     transform: translateY(4%); /* Centraliza a linha verticalmente */
 
@@ -224,7 +259,6 @@ section .banner{
     margin: 210px auto 0; /* Ajusta a margem superior para posicionar mais para baixo */
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     gap: 20px;
     padding: 20px;
@@ -258,7 +292,7 @@ section .banner{
 .circle-text {
     width: 95%;
     font-family: "Work Sans", system-ui;
-    font-size: 1.5em;
+    font-size: 18px;
     font-weight: 500;
     color: #ffffff;
     margin: 0;
@@ -313,8 +347,6 @@ section .map-text {
     position: relative;
     padding-bottom: 150px;
     background-size: 40px 40px;
-    linear-gradient(to right, grey 1px, transparent 1px),
-    linear-gradient(to bottom, grey 1px, transparent 1px);
     background-size: 40px 40px;
     background-image: radial-gradient(circle, #00000064 0.09px, rgba(0, 0, 0, 0) 1px);
 }
@@ -382,6 +414,75 @@ section .map-text {
     font-size: 16px; /* Ajuste o tamanho do ícone */
     vertical-align: middle; /* Alinha o ícone verticalmente ao meio do texto */
     margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+}
+
+/* Media queries para diferentes tamanhos de tela */
+@media (max-width: 768px) {
+    .map-content .etiqueta {
+        width: 100%;
+        flex-direction: row; /* Alinha os elementos verticalmente em telas menores */
+        align-items: flex-start; /* Alinha o conteúdo à esquerda */
+        height: auto; /* Ajusta a altura automaticamente */
+        gap: 0;
+    }
+
+    .map-content .etiqueta img {
+        width: 60px; /* Reduz ainda mais o tamanho das imagens */
+        padding: 5px;
+        padding-top: 20px;
+        padding-left: 10px;
+    }
+
+    .etiqueta p {
+        font-size: 10px; /* Ajusta o tamanho do texto, se necessário */
+    }
+
+    .globo {
+        flex-direction: column; /* Empilha o vídeo e o conteúdo verticalmente */
+        align-items: flex-start;
+        padding-top: 30px;
+    }
+
+    .content {
+        font-size: 0.8em; /* Reduz ainda mais o tamanho do texto em telas menores */
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .globo-back {
+        width: 100%; /* Vídeo ocupa toda a largura em telas menores */
+        justify-content: center; /* Centraliza o vídeo */
+        padding-bottom: 20px; /* Adiciona espaço abaixo do vídeo */
+    }
+
+    .video-globo {
+        width: 100%; /* Garante que o vídeo ocupe toda a largura em telas menores */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+}
+
+@media (max-width: 480px) {
+    .map-content .etiqueta img {
+        width: 100vw; /* Ajusta o tamanho das imagens para telas muito pequenas */
+    }
+
+    .etiqueta p {
+        font-size: 12px; /* Opcional: ajusta o texto para telas muito pequenas */
+    }
+    .globo {
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .content {
+        font-size: 0.7em; /* Tamanho menor para textos em telas pequenas */
+        padding-bottom: 15px; /* Ajusta o espaçamento entre texto e vídeo */
+    }
+
+    .globo-back {
+        padding-bottom: 15px; /* Espaçamento abaixo do vídeo */
+    }
 }
 
 .globo {

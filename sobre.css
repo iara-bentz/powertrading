@@ -113,19 +113,22 @@ header ul li a:hover{
     display: flex;
     width: 930px;
     gap: 110px;
+    background-size: 40px 40px;
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, #00000064 0.09px, rgba(0, 0, 0, 0) 1px);
   }
 
 .titulo {
     color: #000;
     font-family: 'Segoe UI', sans-serif;
-    font-size: 25px;
+    font-size: 26px;
     font-weight: 400;
   }
 
 .titulo2 {
     color: #000;
     font-family: 'Segoe UI', sans-serif;
-    font-size: 25px;
+    font-size: 26px;
     font-weight: 400;
     padding-top: 100px;
   }
@@ -134,7 +137,7 @@ header ul li a:hover{
     padding-top: 10px;
     color: #424242;
     font-family: 'Segoe UI', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 300;
   }
 
@@ -149,6 +152,7 @@ header ul li a:hover{
   .bx-image {
     padding-top: 16px;
     width: 50%; /* 50% do espaço disponível para a imagem */
+    z-index: 2;
   }
 
 .bx-image img {
@@ -303,17 +307,17 @@ footer {
     z-index: 1;
     background: #12111147;
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 30px rgba(157, 232, 255, 0.295);
+    backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(10.9px);
-    border: 1px solid rgba(0, 0, 0, 0.12); /* Garante que o cartão fique na frente da imagem */
+    border: 2px solid rgba(163, 241, 255, 0.12); /* Garante que o cartão fique na frente da imagem */
 }
 
 .card h2 {
     padding-left: 20px;
     text-align: left;
     width: 100vw;
-    font-size: 20px;
+    font-size: 22px;
     color: #fff;
 }
 
@@ -321,7 +325,7 @@ footer {
     flex-direction: column;
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
 }
 
@@ -329,7 +333,7 @@ footer {
     font-family: "Open Sans", sans-serif;
     font-weight: 200;
     color: #fff;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .item {
@@ -350,7 +354,7 @@ footer {
 .number {
     align-items: flex-start;
     color: #ff7700;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: bold;
     margin-right: 10px;
     

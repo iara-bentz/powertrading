@@ -194,7 +194,7 @@ body{
 }
 
 #imagem {
-    transition: background-image 0.5s ease; /* Ajuste o tempo da transição conforme necessário */
+    transition: background-image 0.80s ease; /* Ajuste o tempo da transição conforme necessário */
   }
 
 /* Responsividade */

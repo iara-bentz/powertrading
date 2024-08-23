@@ -189,7 +189,7 @@ header ul li a:hover{
 
 
 .card {
-    background-color: #f5f5f5; /* Cor de fundo dos cards */
+    background-color: #ff7f233a; /* Cor de fundo dos cards */
     border: 1px solid #ddd; /* Borda dos cards */
     border-radius: 8px; /* Borda arredondada */
     padding: 20px;
@@ -246,6 +246,10 @@ header ul li a:hover{
 
 .cards-exportações img {
     align-items: center;
+}
+
+.exportações .card img {
+    height: 400px;
 }
 
 .exportações .card h2 {

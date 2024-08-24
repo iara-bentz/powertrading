@@ -237,17 +237,6 @@ section .banner{
     color: #ff7104;
 }
 
-/*linhas do texto */
-.banner h1::before {
-    content: ""; /* Adiciona conteúdo à pseudo-elemento ::before */
-    position: absolute;
-    left: 0;
-    width: 2px; /* Ajuste a largura da linha vertical */
-    height: 170%; /* Faz com que a linha tenha a altura total do elemento pai */
-    background-color: #ff7104;
-    transform: translateY(10%); /* Centraliza a linha verticalmente */
-}
-
 /* mobile nav e banner*/
 @media (max-width: 768px) {
     #navbar {
@@ -315,12 +304,6 @@ section .banner{
         height: 90vh;
     }
 
-    .banner h1::before {
-        height: 150%; /* Faz com que a linha tenha a altura total do elemento pai */
-        background-color: #F37C27;
-        transform: translateY(0%); /* Centraliza a linha verticalmente */
-    }
-
     .newsletter-bar {
         height: 35px;
         padding-left: 0;
@@ -333,7 +316,7 @@ section .banner{
 }
 
 /* mobile menor nv e banner */
-@media (max-width: 450px) {
+@media (max-width: 386px) {
     section .banner {
         height: 70vh;
     }

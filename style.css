@@ -1,3 +1,38 @@
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
 html, body {
     overflow-x: hidden;
 
@@ -149,7 +184,9 @@ section .banner{
 }
 
 .content-h1-newsletter p {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 30px;
+    font-family: "Heebo";
+    font-weight: 500;
     padding-left: 15px;
     color: #fff;
     font-size: 16px;
@@ -172,7 +209,7 @@ section .banner{
   
   .submit-button {
     padding: 10px 20px;
-    background-color: #ff6a00;
+    background-color: #ff7104;
     color: white;
     border: none;
     border-radius: 0 4px 4px 0;
@@ -186,18 +223,18 @@ section .banner{
   
 
 .banner h1{
-    text-align: left; /* Alinha o texto à esquerda */
-    padding-top: 40px;
-    position: relative;
-    color: rgba(255, 255, 255, 0.889);
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 400;
-    font-style: normal;;
-    font-size: 65px;
-    line-height: 1;
-    position: relative;
-    padding-left: 15px;
+    color: #fff;
+    width: 70%;
+    font-family: 'Heebo', sans-serif;
+    font-size: 74px;
+    line-height: 70px;
+    font-weight: 700;
+    margin: 0;
+}
 
+
+.banner h1.laranja {
+    color: #ff7104;
 }
 
 /*linhas do texto */
@@ -205,14 +242,19 @@ section .banner{
     content: ""; /* Adiciona conteúdo à pseudo-elemento ::before */
     position: absolute;
     left: 0;
-    width: 1.5px; /* Ajuste a largura da linha vertical */
-    height: 133%; /* Faz com que a linha tenha a altura total do elemento pai */
-    background-color: #F37C27;
-    transform: translateY(4%); /* Centraliza a linha verticalmente */
+    width: 2px; /* Ajuste a largura da linha vertical */
+    height: 170%; /* Faz com que a linha tenha a altura total do elemento pai */
+    background-color: #ff7104;
+    transform: translateY(10%); /* Centraliza a linha verticalmente */
 }
 
 /* mobile nav e banner*/
 @media (max-width: 768px) {
+    #navbar {
+        background-color: #fff;
+        z-index: 200;
+    } 
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -250,13 +292,22 @@ section .banner{
     }
 
     .content-h1-newsletter {
+        width: 100%;
         margin-top: 100px;
         margin-left: 75px;
     }
+    
+    .content-h1-newsletter p {
+        padding-top: 0;
+        padding-left: 0;
+    }
 
     .banner .content-h1-newsletter h1 {
-        width: 60vw;
-        font-size: 28px;
+        margin-left: 0;
+        font-weight: 800;
+        width: 50vw;
+        font-size: 46px;
+        line-height: 48px;
     }
 
     .back-video {
@@ -272,6 +323,7 @@ section .banner{
 
     .newsletter-bar {
         height: 35px;
+        padding-left: 0;
     }
 
 
@@ -279,6 +331,33 @@ section .banner{
         font-size: 10px;
     }
 }
+
+/* mobile menor nv e banner */
+@media (max-width: 450px) {
+    section .banner {
+        height: 70vh;
+    }
+
+    .content-h1-newsletter {
+        width: 100%;
+        margin-top: 100px;
+        margin-left: 45px;
+    }
+    
+    .content-h1-newsletter p {
+        padding-top: 0;
+        padding-left: 0;
+    }
+
+    .banner .content-h1-newsletter h1 {
+        margin-left: 0;
+        font-weight: 800;
+        width: 50vw;
+        font-size: 36px;
+        line-height: 38px;
+    }
+}
+
 
 
 conteudo {
@@ -300,6 +379,7 @@ section .map-text {
 }
 
 .map-content {
+    z-index: 3;
     background: linear-gradient(to bottom, #FFFFFF, #DCD5CD);
     height: 600px;
     margin-bottom: 0;
@@ -405,162 +485,165 @@ section .map-text {
     margin-right: 5px; /* Espaçamento entre o ícone e o texto */
 }
 
-
 .globo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000000;
+    position: relative;
     width: 100%;
-    box-sizing: border-box;
-    padding-top: 50px;
+    height: 100vh; /* A altura da seção será a altura total da viewport */
+    overflow: hidden;
 }
 
-.content {
-    flex: 1;
-    max-width: 50%;
-    color: #e3e3e3;
-    text-align: left;
-}
-
-.globo-back {
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o vídeo vertical e horizontalmente */
     width: 100%;
     height: 100%;
-    position: relative;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* Garante que o vídeo fique atrás do conteúdo */
 }
+
 .video-globo {
     width: 100%;
-    height: 100%; /* Garante que o vídeo preencha toda a altura do contêiner */
-    object-fit: cover; /* Faz com que o vídeo cubra o contêiner sem distorcer */
+    height: auto; /* Manter a proporção original do vídeo */
+    object-fit: cover; /* O vídeo será redimensionado para cobrir a área sem distorcer */
 }
 
-.box-informações, .cta {
-    padding-left: 70px;
-    margin-bottom: 20px;
-    z-index: 8;
-}
-
-.text {
-    margin-left: 70px;
-    width: 700px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    font-family: "Bai Jamjuree", sans-serif;
-    font-weight: 200;
-    font-size: 14px;
-}
-
-.box-informações {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Espaçamento entre os itens */
-    justify-content: space-between;
-}
-
-.info-item {
-    display: flex;
-    flex-direction: column;
-    width: calc(50% - 20px); /* Ajusta a largura dos itens para caberem em duas colunas */
-    margin-bottom: 20px;
-}
-
-
-.dados {
-    font-family: "Bai Jamjuree", sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    color: #e3e3e3;
-    margin: 0;
-}
-
-.valor {
-    font-family: "Bai Jamjuree", sans-serif;
-    font-size: 16px;
-    font-weight: normal;
-    color: #e3e3e3;
-    margin: 5px 0; /* Espaçamento vertical entre dados e valor */
-}
-
-.info {
-    font-family: "Bai Jamjuree", sans-serif;
-    font-size: 14px;
-    color: #d65c33;
-    margin: 0;
-    font-weight: 600;
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Camada escura sobre o vídeo */
+    z-index: 2; /* Garante que o overlay fique sobre o vídeo */
 }
 
 .cta {
-    text-align: left;
-    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50px; /* Espaçamento à esquerda */
+    transform: translateY(-50%); /* Centraliza verticalmente em relação ao vídeo */
+    z-index: 3; /* Garante que o conteúdo fique sobre o vídeo e o overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os itens à esquerda */
 }
 
 .cta h2 {
-    width: 58%;
-    font-family: "Bai Jamjuree", sans-serif;
-    font-size: 24px;
+    color: #fff;
+    width: 70%;
+    font-family: 'Heebo', sans-serif;
+    font-size: 74px;
+    line-height: 70px;
     font-weight: 700;
-    padding-top: 30px;
-    padding-bottom: 20px;
+    margin: 0;
+}
 
+.cta h2.laranja {
+    color: #ff7104;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: 20px; /* Espaçamento entre o texto e os botões */
 }
 
 .cta button {
-    background-color: #d65c33; /* Cor de fundo do botão */
     color: #fff; /* Cor do texto do botão */
-    border: none; /* Remove a borda padrão do botão */
-    border-radius: 8px; /* Arredondar os cantos do botão */
+    border-radius: 15px; /* Arredondar os cantos do botão */
     padding: 12px 24px; /* Espaçamento interno (vertical horizontal) */
     font-family: "Open Sans", sans-serif; /* Fonte do botão */
     font-size: 16px; /* Tamanho da fonte */
-    font-weight: 600; /* Peso da fonte */
+    font-weight: 700; /* Peso da fonte */
     cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão */
     transition: background-color 0.3s ease, transform 0.2s ease; /* Animação para transições suaves */
     text-align: center; /* Centraliza o texto dentro do botão */
     display: inline-block; /* Ajusta o botão para se comportar como um bloco em linha */
 }
 
-.cta button:hover {
-    background-color: #ff7104; /* Cor de fundo quando o mouse passa sobre o botão */
+.cta button.bt-1 {
+    background-color: #ff7104; /* Cor de fundo */
+    border: 2px solid #ff7104;
+}
+
+.cta button.bt-1:hover {
+    background-color: #ff4d00; /* Cor de fundo ao passar o mouse */
     transform: scale(1.05); /* Aumenta ligeiramente o tamanho do botão no hover */
 }
 
-.cta button:active {
-    background-color: #d65c33; /* Cor de fundo quando o botão é pressionado */
-    transform: scale(0.98); /* Reduz o tamanho do botão quando pressionado */
+.cta button.bt-2 {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
 }
+
+.cta button.bt-2:hover {
+    background-color: #ccc;
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho do botão no hover */
+}
+
+ 
 
 /* mobile seção globo */
 @media (max-width: 768px) {
     .globo {
-        display: flex;
-        flex-direction: column;
+        height: 100%;
     }
 
-    .content {
-        max-width: 100%;
+    .video-background {
+        height: 100%;
     }
 
-    .text {
-        width: auto;
-        margin-right: 70px;
+    .video-globo {
+        height: 100%;
+    }
+    .cta {
+        left: 20px; /* Reduz o espaçamento à esquerda em dispositivos móveis */
+        padding: 0 10px; /* Adiciona algum preenchimento para dispositivos móveis */
     }
 
-    .box-informações {
-        z-index: 9;
+    .cta h2 {
+        font-size: 36px; /* Reduz o tamanho da fonte em dispositivos móveis */
+        width: auto; /* Ajusta a largura do texto para melhor visualização */
+        line-height: 35px;
+    }
+}
+
+/* mobile menor seção globo */
+@media (max-width: 450px) {
+    .globo {
+        height: 100%;
     }
 
-    section .globo .content .cta {
-        z-index: 2;
+    .video-background {
+        height: 100%;
     }
 
-    .globo-back {
-        width: 60%;
-        align-self: flex-end;
-        transform: translateY(-120%);
-        z-index: 1;
+    .video-globo {
+        height: 100%;
     }
+    .cta {
+        left: 20px; /* Reduz o espaçamento à esquerda em dispositivos móveis */
+        padding: 0 10px; /* Adiciona algum preenchimento para dispositivos móveis */
+    }
+
+    .cta h2 {
+        font-size: 32px; /* Reduz o tamanho da fonte em dispositivos móveis */
+        width: auto; /* Ajusta a largura do texto para melhor visualização */
+        line-height: 35px;
+    }
+
+    .cta button {
+        font-size: 14px;
+        font-weight: 400;
+        border: 1px solid;
+    }
+
 }
 
 

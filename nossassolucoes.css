@@ -1,14 +1,8 @@
-@font-face {
-    font-family: 'AppleGaramond-Light';
-    src: url('fontes/AppleGaramond-Light.ttf') format('truetype'); /* Substitua pelo caminho real do seu arquivo de fonte */
-    font-weight: normal;
-    font-style: normal;
-}
-
 html, body {
     height: 100%; /* Garante que o body ocupe toda a altura da tela */
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 body{
@@ -138,11 +132,12 @@ header ul li a:hover{
 
 
 .texto-operações {
+    display: flex;
+    align-items: flex-start;
     width: 70vw;
     padding-top: 50px;
     display: flex;
     flex-direction: row; 
-    align-items: center;
     justify-content: center; 
     gap: 90px;
     margin: 0 auto;
@@ -152,7 +147,7 @@ header ul li a:hover{
 
 
 .texto-operações h2, .texto-operações p {
-    width: auto; 
+    width: 50%; 
     display: inline-block; 
 }
 
@@ -189,8 +184,8 @@ header ul li a:hover{
 
 
 .card {
-    background-color: #ff7f233a; /* Cor de fundo dos cards */
-    border: 1px solid #ddd; /* Borda dos cards */
+    background-color: #ffffff; /* Cor de fundo dos cards */
+    border: 1px solid #FF6F3D; /* Borda dos cards */
     border-radius: 8px; /* Borda arredondada */
     padding: 20px;
     width: calc(22% - 40px); /* Reduzido o width dos cards */
@@ -200,6 +195,9 @@ header ul li a:hover{
     
 }
 
+.card .gif img {
+    width: 70px;
+}
 .cards-container h2 {
     font-size: 16px;
     margin-bottom: 10px;
@@ -291,7 +289,7 @@ footer {
 .footer-tagline {
     padding-top: 20px;
     padding-left: 0px;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
     font-size: 15px;
     letter-spacing: 0.15px;
     font-weight: 500;
@@ -310,7 +308,7 @@ footer {
 }
 
 .col h3 {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
     font-weight: 400;
     font-style: normal;
     margin-bottom: 20px;

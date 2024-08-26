@@ -629,7 +629,6 @@ section .map-text {
 
 }
 
-
 footer {
     width: 100vw;
     background: #000000;
@@ -638,10 +637,8 @@ footer {
     font-size: 13px;
     line-height: 20px;
     position: relative; /* Necessário para o alinhamento adequado */
-    clear: both; /* Garante que o footer fique abaixo de qualquer conteúdo flutuante */
-    border-top: 0.10px solid #ffffff48; /* Linha branca na parte superior do footer */
-
 }
+
 
 .row {
     max-width: 1200px; /* Limita a largura do conteúdo */
@@ -671,7 +668,7 @@ footer {
 
 .logo {
     padding: 0;
-    width: 200px;
+    width: 220px;
 }
 
 .iso {
@@ -695,6 +692,10 @@ footer {
     font-weight: 300;
     margin: 10px 0;
     color: #fff;
+}
+p {
+    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-weight: 350px;
 }
 
 

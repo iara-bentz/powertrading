@@ -197,7 +197,7 @@ body{
     transition: background-image 0.80s ease; /* Ajuste o tempo da transição conforme necessário */
   }
 
-/* Responsividade */
+/* Responsividade nav*/
 @media (max-width: 768px) {
     .nav-links {
         display: none;

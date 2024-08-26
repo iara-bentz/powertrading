@@ -97,4 +97,22 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
   });
+
+  window.onscroll = function() {
+      var navbar = document.getElementById("navbar");
+      if (window.pageYOffset > 50) { 
+          navbar.classList.add("scrolled");
+      } else {
+          navbar.classList.remove("scrolled");
+      }
+  };
+
+      document.addEventListener("DOMContentLoaded", function() {
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", function() {
+  navLinks.classList.toggle("active");
+});
+});
   

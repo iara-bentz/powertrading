@@ -22,20 +22,21 @@
 
 <body>
     <header class="header">
-        <div class="container">
-            <div class="flex">
-                <a href="#index.html"><i class="logo"><img id="logo" src="imagens/logo.png"/></i></a>
-                <nav>
-                    <ul class="nav-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="nossassolucoes.html">Nossas Soluções</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                        <li><a href="ondeestamos.html">Onde Estamos</a></li>
-                    </ul>
-                </nav>
+        <nav class="navbar transparent" id="navbar">
+            <div class="logo"><img src="imagens/logo.png"></div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="nossassolucoes.html">Nossas Soluções</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="ondeestamos.html">Onde Estamos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
             </div>
-        </div>
+        </nav>
         <div class="etiqueta">
             <p aria-hidden="true">
                 <span class="placeholder col-6"></span>
@@ -125,5 +126,25 @@
         </div>
     </div>
 </footer>   
+
+<script>
+    window.onscroll = function() {
+        var navbar = document.getElementById("navbar");
+        if (window.pageYOffset > 50) { 
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    };
+
+        document.addEventListener("DOMContentLoaded", function() {
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", function() {
+    navLinks.classList.toggle("active");
+});
+});
+</script>
 </body>
 </html>    

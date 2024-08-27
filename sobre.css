@@ -462,6 +462,31 @@ body{
     }
 }
 
+@media (max-width: 445px) {
+    .card {
+        width: 150px; /* Ajusta o tamanho dos cartões para 200px */
+        height: 150px;
+    }
+
+    .card .front img {
+        max-width: 40px; /* Ajusta o tamanho do emoji */
+        margin-bottom: 0;
+        margin-top: 20px;
+        padding-bottom: 0;
+    }
+
+    .card .back p {
+        font-size: 10px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 150px); 
+        grid-template-rows: repeat(3, 150px); 
+        justify-content: center;
+    }
+
+}
+
 
 
 

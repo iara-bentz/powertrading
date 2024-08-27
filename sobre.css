@@ -465,6 +465,8 @@ body{
 @media (max-width: 445px) {
     .card .front, .card .back {
         backdrop-filter: blur(15px);
+        background: rgba(255, 255, 255, 0.1); /* Fallback para navegadores sem suporte */
+        background-color: rgba(255, 255, 255, 0.3); /* Fallback */
     }
     .card {
         width: 150px; /* Ajusta o tamanho dos cartões para 200px */

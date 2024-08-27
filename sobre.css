@@ -463,6 +463,9 @@ body{
 }
 
 @media (max-width: 445px) {
+    .card .front, .card .back {
+        backdrop-filter: blur(15px);
+    }
     .card {
         width: 150px; /* Ajusta o tamanho dos cartões para 200px */
         height: 150px;

@@ -71,7 +71,7 @@ body{
     z-index: 1000;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
-    z-index: 3;
+    z-index: 30;
 }
 
 
@@ -381,7 +381,7 @@ section .map-text {
 }
 
 .map-content .map img {
-    width: 45%;
+    width: 50%;
 }
 
 .map-text {
@@ -391,45 +391,24 @@ section .map-text {
 
 .map-text h2 {
     width: 50%;
-    font-family: "Work Sans", system-ui;
-    font-size: 32px;
+    font-family: 'Heebo';
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.05;
     margin: 0 auto;
 }
 
 .map-text p {
     text-align: center;
     width: 50%;
-    font-family: "Work Sans", system-ui;
-    font-size: 12px;
-    font-weight: 450;
+    font-family: 'Heebo';
+    font-size: 18px;
+    font-weight: 400;
+    color: #3b3b3b;
     margin: 0 auto;
     margin-top: 10px;
 }
 
-.map-content .etiqueta {
-    font-family: "Work Sans", system-ui;
-    border-top: 2px solid #FF6F3D;
-    position: absolute;
-    bottom: -50px;
-    display: flex;
-    flex-direction: row;
-    width: 85%;
-    height: 145px;
-    justify-content: left;
-    background-color: #fff8f1;
-    border-top-left-radius: 15px; /* Arredonda o canto superior esquerdo */
-    border-bottom-left-radius: 15px; /* Arredonda o canto inferior esquerdo */
-    right: 0; /* Encosta a div no lado direito */
-    align-items: center; /* Centraliza verticalmente os elementos filhos */
-}
-
-.map-content .etiqueta img {
-    display: flex;
-    flex-direction: column;
-    width: 140px;
-    height: auto;
-    padding: 20px;
-}
 
 /* mobile mapa e etiqueta*/
 @media (max-width: 768px) {
@@ -459,13 +438,6 @@ section .map-text {
         height: auto;
         font-size: 12px;
     }
-}
-
-
-.etiqueta p span.material-symbols-outlined {
-    font-size: 16px; /* Ajuste o tamanho do ícone */
-    vertical-align: middle; /* Alinha o ícone verticalmente ao meio do texto */
-    margin-right: 5px; /* Espaçamento entre o ícone e o texto */
 }
 
 .globo {
@@ -628,6 +600,141 @@ section .map-text {
     }
 
 }
+
+.mercado-local {
+    position: relative;
+    width: 100vw; /* Reduz a largura */
+    height: 85vh; /* Reduz a altura */
+    margin: 0 auto; /* Centraliza o contêiner */
+    padding-bottom: 60px;
+
+}
+  
+  .background-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .background-image img#main-background {
+    position: absolute;
+    width: 100vw; /* Reduz a largura */
+    height: 100vh; /* Reduz a altura */
+    object-fit: cover;
+    z-index: -1;
+}
+
+  
+.overlay-aviao {
+    position: absolute;
+    width: 100vw; /* Reduz a largura */
+    height: 100vh; /* Reduz a altura */
+    background: url('imagens/overlayaviao.png') no-repeat center center;
+    background-size: cover; 
+    opacity: 0.5; /* Corrigido para 0.5 para opacidade */
+    z-index: 1;
+}
+
+  
+  
+  .title-container {
+    text-align: center; 
+    margin-top: -350px;
+    font-family: 'Heebo', sans-serif;
+    font-size: 82px;
+    font-weight: 700;
+    z-index: 1;
+  }
+  
+  .title {
+    color: white;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  
+  .title .highlight {
+    color: #ff7104;
+  }
+  
+  .subtitle {
+    margin: 0 auto; /* Centraliza o elemento */
+    width: 650px;
+    font-family: 'Heebo', sans-serif;
+    font-size: 20px;
+    color: white;
+  }
+  
+  .subtitle .highlight {
+    color: #ff7104;
+  }
+  
+  .image-selector {
+    height: 200px;
+    z-index: 3;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+  }
+  
+  .selector-image {
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    border-right: 3px solid #ff7104;
+    transition: all 0.5s ease;
+  }
+  
+  .selector-image:hover {
+    transform: scale(1.1);
+  }
+  
+  .selector-image.selected {
+    border: 4px solid #ff7104;
+    transition: all 0.8s ease;
+  }
+
+
+
+  @media (max-width: 768px) {
+    .title {
+      font-size: 3rem;
+    }
+  
+    .subtitle {
+      font-size: 1.2rem;
+    }
+  
+    /* Caso específico para o span */
+    .title .highlight, .subtitle .highlight {
+      font-size: inherit; /* Garante que herda o tamanho de fonte atual */
+    }
+
+    .subtitle {
+        width: 300px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .image-selector {
+        height: 150px;
+
+    }
+
+    .image-selector img {
+        height: 70px;
+        width: auto;
+    }
+  }
+  
 
 footer {
     width: 100vw;

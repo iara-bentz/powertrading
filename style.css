@@ -318,13 +318,18 @@ section .banner{
 /* mobile menor nv e banner */
 @media (max-width: 386px) {
     section .banner {
-        height: 70vh;
+        height: 100vh;
+    }
+
+    .back-video {
+        width: auto;
+        height: 100vh;
     }
 
     .content-h1-newsletter {
         width: 100%;
         margin-top: 100px;
-        margin-left: 45px;
+        margin-left: 25px;
     }
     
     .content-h1-newsletter p {
@@ -410,18 +415,19 @@ section .map-text {
 }
 
 
-/* mobile mapa e etiqueta*/
+/* mobile mapa*/
 @media (max-width: 768px) {
     section .map-text {
         padding-bottom: 0;
     }
     .map-text h2 {
-        font-size: 20px;
-        width: 70%;
+        font-size: 26px;
+        width: 80%;
     }
 
     .map-text p {
-        width: 60%;
+        width: 70%;
+        font-size: 12px;
     }
 
     .map-content .map {
@@ -430,13 +436,7 @@ section .map-text {
 
     .map-content .map img {
         z-index: 3;
-        width: 90vw;
-    }
-
-  .map-content .etiqueta {
-        width: 100%;
-        height: auto;
-        font-size: 12px;
+        width: 100vw;
     }
 }
 
@@ -594,9 +594,21 @@ section .map-text {
     }
 
     .cta button {
-        font-size: 14px;
-        font-weight: 400;
-        border: 1px solid;
+        font-size: 10px;
+        font-weight: 500;
+        border: 0.5px solid;
+    }
+
+    .cta button.bt-2 {
+        border: 0.5px solid;
+    }
+
+    .cta button.bt-1 {
+        border: 0.5px solid #ff7104;
+    }
+
+    .buttons {
+        width: 100%;
     }
 
 }
@@ -732,6 +744,21 @@ section .map-text {
     .image-selector img {
         height: 70px;
         width: auto;
+    }
+  }
+
+  @media (max-width: 410px) {
+    .image-selector {
+        padding-left: 5px;
+        padding-bottom: 20px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 12px;
     }
   }
   

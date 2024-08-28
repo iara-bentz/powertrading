@@ -306,6 +306,7 @@ body{
     }
 
     .bx-video video {
+        width: 220px;
         padding-top: 0;
         padding-bottom: 100px;
     }

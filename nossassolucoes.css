@@ -1,3 +1,38 @@
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
 html, body {
     height: 100%; /* Garante que o body ocupe toda a altura da tela */
     margin: 0;
@@ -156,11 +191,11 @@ body{
     position: absolute;
     top: 150px;
     font-style: normal;
-    font-weight: 800;
-    font-family: "Open Sans", sans-serif; 
+    font-weight: 600;
+    font-family: 'Heebo';
     font-size: 32px;
     padding-left: 60px;
-    color: #fff;
+    color: #fffffff1;
 }
 
 .conteudo {
@@ -198,7 +233,7 @@ body{
 
 
 .texto-operações h2 {
-    font-family: "Open Sans", sans-serif; 
+    font-family: 'Heebo';
     font-size: 18px;
     font-weight: 700;
     color: #4d4d4d;
@@ -206,7 +241,7 @@ body{
 }
 
 .texto-operações p {
-    font-family: "Open Sans", sans-serif; 
+    font-family: 'Heebo';
     font-size: 16px;
     color: #363636;
     text-align: left; 
@@ -215,7 +250,7 @@ body{
 
 .cards-container {
     padding-bottom: 60px;
-    font-family: "Open Sans", sans-serif; 
+    font-family: 'Heebo';
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -255,6 +290,10 @@ body{
 
 /* Responsivo para telas menores */
 @media (max-width: 768px) {
+    .exportações h2 {
+        padding-left: 30px;
+    }
+
     .conteudo {
         border-top: 3px solid #FF6F3D;
         border-top-left-radius: 0px;
@@ -307,13 +346,21 @@ body{
 }
 
 @media (max-width: 480px) {
+    .capa img {
+        height: 100px;
+    }
+
+    .capa label {
+        padding-left: 30px;
+    }
+
     .card {
         width: calc(100% - 40px); /* Ajusta para 1 card por linha */
     }
 }
 
 .exportações h2 {
-    font-family: "Open Sans", sans-serif; 
+    font-family: 'Heebo';
     font-size: 18px;
     font-weight: 700;
     color: #4d4d4d;
@@ -379,7 +426,7 @@ footer {
 .footer-tagline {
     padding-top: 20px;
     padding-left: 0px;
-    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-family: 'Heebo';
     font-size: 15px;
     letter-spacing: 0.15px;
     font-weight: 500;
@@ -398,7 +445,7 @@ footer {
 }
 
 .col h3 {
-    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-family: 'Heebo';
     font-weight: 400;
     font-style: normal;
     margin-bottom: 20px;
@@ -409,19 +456,19 @@ footer {
 }
 
 .email-id {
-    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-family: 'Heebo';
     font-weight: 300;
     margin: 10px 0;
     color: #fff;
 }
 p {
-    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-family: 'Heebo';
     font-weight: 350px;
 }
 
 
 ul {
-    font-family: "Open Sans", sans-serif; /* Aplica a fonte Open Sans */
+    font-family: 'Heebo';
     font-weight: 350px;
     padding: 0;
     list-style: none;

@@ -238,7 +238,7 @@ section .banner{
 }
 
 /* mobile nav e banner*/
-@media (min-width: 480px) and (max-width: 760px) {
+@media (min-width: 300px) and (max-width: 760px) {
     #navbar {
         background-color: #fff;
         z-index: 200;

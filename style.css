@@ -238,7 +238,7 @@ section .banner{
 }
 
 /* mobile nav e banner*/
-@media (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 760px) {
     #navbar {
         background-color: #fff;
         z-index: 200;
@@ -316,7 +316,7 @@ section .banner{
 }
 
 /* mobile menor nv e banner */
-@media (max-width: 386px) {
+@media (min-width: 300px) and (max-width: 480px) {
     section .banner {
         height: 100vh;
     }
@@ -545,7 +545,7 @@ section .map-text {
  
 
 /* mobile seção globo */
-@media (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 780px) {
     .globo {
         height: 100%;
     }
@@ -570,7 +570,7 @@ section .map-text {
 }
 
 /* mobile menor seção globo */
-@media (max-width: 450px) {
+@media (min-width: 300px) and (max-width: 480px) {
     .globo {
         height: 100%;
     }
@@ -747,7 +747,7 @@ section .map-text {
     }
   }
 
-  @media (max-width: 410px) {
+  @media (min-width: 300px) and (max-width: 480px) {
     .image-selector {
         padding-left: 5px;
         padding-bottom: 20px;

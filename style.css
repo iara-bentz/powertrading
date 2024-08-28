@@ -238,7 +238,8 @@ section .banner{
 }
 
 /* mobile nav e banner*/
-@media (min-width: 300px) and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
+
     #navbar {
         background-color: #fff;
         z-index: 200;
@@ -301,7 +302,7 @@ section .banner{
 
     .back-video {
         width: auto;
-        height: 90vh;
+        height: 70vh;
     }
 
     .newsletter-bar {
@@ -318,9 +319,12 @@ section .banner{
 /* mobile menor nv e banner */
 @media (min-width: 300px) and (max-width: 480px) {
     section .banner {
-        height: 100vh;
+        height: 75vh;
     }
 
+    .overlay {
+        height: 89vh;
+    }
     .back-video {
         width: auto;
         height: 100vh;
@@ -343,6 +347,10 @@ section .banner{
         width: 50vw;
         font-size: 36px;
         line-height: 38px;
+    }
+
+    .tradingview-widget-container {
+        top: 400px;
     }
 }
 
@@ -451,13 +459,17 @@ section .map-text {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centraliza o vídeo vertical e horizontalmente */
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1; /* Garante que o vídeo fique atrás do conteúdo */
+    z-index: 1;
+    background-image: url('imagens/globo (3).gif');
+    background-size: cover; /* Faz a imagem cobrir o contêiner sem distorcer */
+    background-position: right; /* Alinha a imagem à direita do contêiner */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
 }
 
 .video-globo {
@@ -542,8 +554,31 @@ section .map-text {
     transform: scale(1.05); /* Aumenta ligeiramente o tamanho do botão no hover */
 }
 
- 
+.imagem-globo {
+    display: none; /* Esconder o GIF */
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0; /* Posiciona a imagem à direita do contêiner */
+    object-fit: cover; /* Faz a imagem cobrir o contêiner sem distorcer */
+    object-position: right; /* Ajusta a imagem para exibir o lado direito */
+    z-index: 1;
+}
 
+.imagem-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinha a imagem ao final do contêiner */
+    z-index: 1;
+}
+
+/* mobile seção globo */
 /* mobile seção globo */
 @media (min-width: 480px) and (max-width: 780px) {
     .globo {
@@ -555,16 +590,21 @@ section .map-text {
     }
 
     .video-globo {
-        height: 100%;
+        display: none; /* Esconder o vídeo */
     }
+
+    .imagem-globo {
+        display: block; /* Mostrar o GIF */
+    }
+
     .cta {
-        left: 20px; /* Reduz o espaçamento à esquerda em dispositivos móveis */
-        padding: 0 10px; /* Adiciona algum preenchimento para dispositivos móveis */
+        left: 20px;
+        padding: 0 10px;
     }
 
     .cta h2 {
-        font-size: 36px; /* Reduz o tamanho da fonte em dispositivos móveis */
-        width: auto; /* Ajusta a largura do texto para melhor visualização */
+        font-size: 36px;
+        width: auto;
         line-height: 35px;
     }
 }
@@ -580,16 +620,21 @@ section .map-text {
     }
 
     .video-globo {
-        height: 100%;
+        display: none; /* Esconder o vídeo */
     }
+
+    .imagem-globo {
+        display: block; /* Mostrar o GIF */
+    }
+
     .cta {
-        left: 20px; /* Reduz o espaçamento à esquerda em dispositivos móveis */
-        padding: 0 10px; /* Adiciona algum preenchimento para dispositivos móveis */
+        left: 20px;
+        padding: 0 10px;
     }
 
     .cta h2 {
-        font-size: 32px; /* Reduz o tamanho da fonte em dispositivos móveis */
-        width: auto; /* Ajusta a largura do texto para melhor visualização */
+        font-size: 32px;
+        width: auto;
         line-height: 35px;
     }
 
@@ -610,7 +655,6 @@ section .map-text {
     .buttons {
         width: 100%;
     }
-
 }
 
 .mercado-local {

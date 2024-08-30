@@ -1,8 +1,42 @@
-body{
-    flex-direction: column;
-    width: 100%;
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+body {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupe a altura total da tela */
     margin: 0;
 }
 
@@ -20,18 +54,18 @@ body{
     z-index: 1000;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
-    z-index: 3;
+    z-index: 10;
 }
 
 
 .navbar.scrolled {
     backdrop-filter: blur(13px); 
-    background-color: #0000005f;
+    background-color: #ffffff5f;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.203);
 }
 
 .navbar.scrolled .nav-links a {
-    color: #ffffff; /* Cor dos links quando o fundo é branco */
+    color: #262626; /* Cor dos links quando o fundo é branco */
 }
 
 .logo img {
@@ -126,158 +160,241 @@ body{
 }
 
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
 .content {
     display: flex;
-    align-items: center;
-    min-height: 100vh; /* Altere esta linha */
-    flex-direction: column;
+    min-height: 100vh; 
+    background-image: url('imagens/back-contato.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.black-bar {
-    z-index: 2;
-    font-size: 14px;
-    font-family: 'Open Sans',  sans-serif;
-    font-weight: 490px;
-    margin: 0;
-    width: 100vw;
-    background-color: #000;
+.left {
+    flex: 1;
+    padding: 50px;
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    z-index: 5;
+}
+
+.left h1 {
     color: #fff;
-    padding: 5px 0; /* Ajuste conforme necessário */
-    text-align: center;
-    left: 0;
-    margin-left: 0;
+    font-family: 'Heebo';
+    font-size: 65px;
+    font-weight: 500;
+    line-height: 1;
 }
 
-.blue-rectangle {
-    position: relative;
-    display: flex;
-    box-shadow: 0 29px 100px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 0 0 55px 55px; /* Os dois últimos valores controlam os cantos inferiores */
-    width: 950px; /* Largura de 100% da largura da tela */
-    height: 300px; /* Altura do retângulo, ajuste conforme necessário */
-    background-color: #3498db; /* Cor azul, ajuste conforme necessário */
-    z-index: 0;
+.left p {
+    padding-top: 20px;
+    color: #fff;
+    font-family: 'Heebo';
+    font-size: 18px;
+    line-height: 1.2;
 }
 
-
-.text-box {
-    flex-direction: column;
+.right {
     width: 50%;
+    padding: 20px;
     display: flex;
     align-items: center;
-}
-
-.paragrafo1 {
-    width: 55%;
-    color: #FFFDFD;
-    text-shadow: 0px 4px 18px rgba(136, 10, 117, 0.43);
-    font-family:  'Open Sans',  sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.50px;
-    padding-top: 35px
-}
-.paragrafo2 {
-    width: 55%;
-    color: #FFFDFD;
-    text-shadow: 0px 4px 18px rgba(10, 76, 136, 0.83);
-    font-family:  'Open Sans',  sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 750;
-    letter-spacing: 0.50px;
-    padding-top: 15px;
-}
-
-.box {
-    display: flex;
-    width: 930px;
-    display: flex;
-}
-
-.form-box {
-    align-items: center;
-    height: 630px;
-    width: 40%;
-    background: linear-gradient(180deg, rgba(231, 180, 255, 0.56) 12.37%, rgba(255, 255, 255, 0.49) 51.02%, rgba(226, 166, 255, 0.13) 88.88%);
-    box-shadow: 0px 3px 149px 0px rgba(0, 0, 0, 0.23);
-    backdrop-filter: blur(10px);
-    border-radius:  0;
-    box-shadow: 0px 29px 100px 0px rgba(0, 0, 0, 0.25);
-}
-
-.form-box form{
-    margin: 27px 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.form-box p {
-    align-self: center;
-    width: 80%;
-    color: #000;
-    font-family: 'Open Sans';
-    font-size: 11.5px;
-    font-weight: 350;
-    letter-spacing: 0.10px;
-}
-
-form .input-group {
-    margin-bottom: 15px;
-    display: flex;
     justify-content: center;
 }
 
-form .input-group input {
-    width: 80%;
-    height: 30px;
-    background: rgba(255, 255, 255, 0.95);
-    outline: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    padding: 15px;
-    font-family: 'Segoe UI', serif;
-    font-size: 13px;
-    transition: all 0.4s ease;
-    color: rgba(0, 0, 0, 0.50);
+
+
+.form-box form {
+    display: flex;
+    flex-direction: column;
 }
 
-form .input-group input:focus {
-    border-color: #3586ff;
+
+
+.form-box label {
+    color: #2a2a2ab8;
+    margin-bottom: 5px;
+    font-weight: regular;
 }
 
-form .input-group button {
-    width: 80%;
-    height: 47px;
-    background: #428BC1;
-    border-radius: 4px;
-    border-color: transparent;
+.form-box input,
+.form-box textarea {
+    border: none;
+    border-bottom: 0.5px solid #0000003a;
+    background: transparent;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.form-box textarea {
+    resize: none; /* Desativa a capacidade de redimensionar a área de texto */
+    height: 80px; /* Ajuste a altura para diminuir o tamanho */
+    width: 90%; /* Largura ajustável se necessário */
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-box video {
+    display: flex;
+    border-radius: 15px;
+    padding-top: 40px;
+    align-self: center;
+    width: 400px;
+    height: auto;
+}
+
+
+.name-fields {
+    display: flex;
+    gap: 0px;
+    padding-right: 30px;
+}
+  
+.field-group {
+    flex: 1;
+}
+
+.input-field {
+    border: none;
+    border-bottom: 1px solid #ccc; /* Linha inferior */
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
     outline: none;
-    margin-top: 15px;
-    color: #FFF;
+}  
+
+.form-box {
+    padding-left: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    padding-top: 80px;
+    background: rgba(255, 255, 255, 0.2); 
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 100px; 
+    height: calc(100% - 40px); /* Ajuste a altura para levar em conta a margem */
+    transform: translateY(0); 
+}
+
+/* Estilo dos inputs e textarea */
+input[type="text"], input[type="email"], textarea {
+    border: none;
+    border-bottom: 0.5px solid #00000033; /* Linha inferior */
+    background: transparent;
+    box-sizing: border-box;
+    width: 90%;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none; /* Evita redimensionamento */
+    margin-bottom: 20px;
+}
+
+
+/* Flexbox para alinhar labels e inputs lado a lado */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px; /* Espaçamento entre grupos de inputs */
+}
+
+.input-group label {
+    flex: 1; /* Flexível para ocupar espaço igual */
+    margin-right: 10px; 
+}
+
+.input-group input {
+    flex: 2;
+}
+
+
+button {
+    width: 250px;
+    background-color: #428BC1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 15px;
-    box-shadow: 0px 4px 29px 0px rgba(0, 0, 0, 0.34);
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (max-width:930px) {
-    .text-box{
-        display: flex;
+button img {
+    margin-left: 10px;
+}
+
+/* Estilo para o container do botão */
+.btn {
+    width: 90%;
+    display: flex;
+    align-items:flex-start; /* Alinha os itens verticalmente no centro */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    margin-top: 0px; /* Espaço acima do container */
+}
+
+.btn label {
+    flex: 1; /* Faz com que a label ocupe o espaço disponível */
+    font-size: 14px; /* Tamanho da fonte da label */
+    margin-right: 20px; /* Espaço entre a label e o botão */
+}
+
+.btn button {
+    display: flex;
+    align-items: center; /* Alinha o texto e a imagem dentro do botão */
+    background-color: #428BC1; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none;
+    height: 50px;
+    border-radius: 5px; /* Bordas arredondadas do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    cursor: pointer; /* Cursor de pointer ao passar sobre o botão */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.btn button:hover {
+    background-color: #357ab8; /* Cor de fundo ao passar o mouse */
+}
+
+.btn button img {
+    margin-right: 8px; /* Espaço entre a imagem e o texto */
+}
+
+
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .right {
+        margin-top: 20px;
     }
 }
 
-.video-container {
-    padding-left: 80px;
-    padding: 50px 50px;
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-}
-
-.video-container video {
-    border-radius: 12px;
-    box-shadow: 3px 6px 26px 0px rgba(0, 0, 0, 0.5);
-}
 
 footer {
     width: 100vw;

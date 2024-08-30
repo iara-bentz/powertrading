@@ -817,6 +817,12 @@ section .map-text {
     color: white;
 }
 
+
+.footer-column-img {
+    translate: 0 -30px;
+}
+
+
 .line {
     border-top: 0.5px solid white;
     margin-bottom: 0px;
@@ -834,8 +840,6 @@ section .map-text {
     display: flex;
     margin-bottom: 30px;
     align-items: flex-start; /* Alinha o conteúdo ao topo */
-
-
 }
 
 .footer-column {
@@ -843,16 +847,16 @@ section .map-text {
     text-align: left; 
 }
 
-.footer-column img {
+.footer-column-img img {
     display: block;
     margin: 0 auto 10px auto; /* Centralizar as imagens na coluna */
 }
 
-.footer-column .logo {
-    width: 80%;
+.footer-column-img .logo {
+    width: 60%;
 }
 
-.footer-column .iso {
+.footer-column-img .iso {
     width: 45%;
 }
 

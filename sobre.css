@@ -174,31 +174,36 @@ body{
 }
 
 .box {
+    display: flex;
+    flex-direction: row;
     position: relative;
     margin-top: 70px;
-    width: 930px;
+    width: 90vw;
     gap: 110px;
     background-size: 40px 40px;
     background-size: 40px 40px;
     background-image: radial-gradient(circle, #00000064 0.09px, rgba(0, 0, 0, 0) 1px);
+    padding-bottom: 50px;
   }
 
 .titulo {
-    color: #000;
+    color: #ff7700;
     font-family: 'Heebo';
     font-size: 26px;
-    font-weight: 400;
+    font-weight: 600;
   }
 
 .titulo2 {
-    color: #000;
+    color: #ff7700;
     font-size: 26px;
-    font-weight: 400;
+    font-family: 'Heebo';
+    font-weight: 600;
   }
 
 .paragrafo {
-    padding-top: 10px;
-    color: #424242;
+    margin: 0;
+    padding-top: 0px;
+    color: #010101;
     font-family: 'Heebo';
     font-size: 16px;
     font-weight: 300;
@@ -209,43 +214,22 @@ body{
   }
   
 .bx-text {
+    width: 45%;
     display: flex;
     flex-direction: column;
-    width: 100vw; 
-    flex: 1; 
-
   }
 
-.bx-image {
-    display: flex;
-    flex-direction: row;
-    padding-top: 16px;
-    width: 100%; /* 50% do espaço disponível para a imagem */
-    z-index: 2;
-  }
-
-.bx-video {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start; /* Alinha os itens ao topo */
-    justify-content: space-between; /* Espaçamento igual entre os itens */
-    gap: 30px; /* Espaço entre o texto e o vídeo */
-    padding-top: 16px;
-    width: 100%; /* Ocupar 100% da largura disponível */
+.imagem {
+    flex: 1;
+    width: 25vw;
+    margin-right;: 50px
 }
 
-.bx-video video {
-    padding-bottom: 50px;
+.imagem img {
     padding-top: 50px;
-    width: 335px;
-    height: auto;
+    padding-bottom: 50px;
+    width: 70%;
 }
-
-.bx-image img {
-    width: 400px;
-}
-
 /* primeira seção responsiva */
 @media (max-width: 768px) {
     .content {
@@ -260,10 +244,6 @@ body{
         flex-direction: column;
         width: 70vw;
         gap: 10px;
-    }
-
-    .bx-image {
-        flex-direction: column;
     }
 
     .bx-text {
@@ -292,23 +272,10 @@ body{
 
     .bx-image img{
         padding-top: 20px;
-        width: 270px;
         align-self: center;
     }
-
-    .bx-video {
-        padding-top: 0;
-        flex-direction: column;
-    }
-
-    .bx-video p {
-        width: 70vw;
-    }
-
-    .bx-video video {
-        width: 220px;
-        padding-top: 0;
-        padding-bottom: 100px;
+    .imagem {
+        width: 100vw;
     }
 }
 
@@ -316,7 +283,7 @@ body{
     position: relative;
     width: 100%;
     padding: 60px 20px;
-    background: url('imagens/porto.png') no-repeat center center/cover;
+    background: url('imagens/armazenamento100.jpg') no-repeat center center/cover;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -331,11 +298,11 @@ body{
     position: absolute;
     top: 20px; 
     left: 20px; 
-    color: #F37C27;
+    color: #fc710e;
     font-family: 'Heebo';
     font-size: 32px; 
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.31); 
     z-index: 1; 
 }
 
@@ -368,11 +335,13 @@ body{
     justify-content: center;
     text-align: center;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(12px);
 }
 
 .card .front {
+    background-color: #ffffff3c;
+    border: 0.2px solid #ffffff3a;
     font-family: 'Heebo';
     display: flex;
     flex-direction: column;
@@ -390,7 +359,7 @@ body{
     font-family: 'Heebo';
     font-size: 16px;
     font-weight: 700;
-    color: #ff7700;
+    color: #131111;
     margin: 0;
 }
 

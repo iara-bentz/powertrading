@@ -729,10 +729,9 @@ section .map-text {
   }
   
   .image-selector {
-    height: 200px;
     z-index: 3;
     position: absolute;
-    bottom: 20px;
+    bottom: 80px;
     right: 20px;
     display: flex;
     gap: 10px;
@@ -742,7 +741,7 @@ section .map-text {
   
   .selector-image {
     width: auto;
-    height: 200px;
+    height: 120px;
     object-fit: cover;
     cursor: pointer;
     border-right: 3px solid #ff7104;

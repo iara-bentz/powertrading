@@ -173,6 +173,7 @@ body{
 }
 
 .box {
+    padding-left: 70px;
     display: flex;
     flex-direction: row;
     position: relative;
@@ -186,14 +187,14 @@ body{
   }
 
 .titulo {
-    color: #ff7700;
+    color: #fb8d48f7;
     font-family: 'Heebo';
     font-size: 26px;
     font-weight: 600;
   }
 
 .titulo2 {
-    color: #ff7700;
+    color: #fb8d48f7;
     font-size: 26px;
     font-family: 'Heebo';
     font-weight: 600;
@@ -297,7 +298,7 @@ body{
     position: absolute;
     top: 20px; 
     left: 20px; 
-    color: #fc710e;
+    color: #fb8d48f7;
     font-family: 'Heebo';
     font-size: 32px; 
     font-weight: bold;
@@ -365,7 +366,7 @@ body{
 .card .back {
     font-family: 'Heebo';
     transform: rotateY(180deg);
-    background: #ff7700;
+    background: #fb8d48f7;
     color: #fff;
     display: flex;
     align-items: center;

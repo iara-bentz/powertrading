@@ -178,17 +178,18 @@ body{
     position: absolute;
     position: relative;
     width: 100vw;
-    height: 29vh;
+    height: 32vh;
 }
 
 .capa img {
+    padding-top: 50px;
     width: 100vw;
     position: absolute;
 }
 
 .capa label {
     position: absolute;
-    top: 150px;
+    top: 270px;
     font-style: normal;
     font-weight: 600;
     font-family: 'Heebo';
@@ -233,9 +234,10 @@ body{
 
 .texto-operações h2 {
     font-family: 'Heebo';
-    font-size: 18px;
+    font-size: 32px;
+    line-height: 1;
     font-weight: 700;
-    color: #4d4d4d;
+    color: #ff913d;
     text-align: left; 
 }
 

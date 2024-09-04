@@ -199,6 +199,8 @@ body{
 }
 
 .conteudo {
+    padding-bottom: 150px; /* Ajuste este valor conforme necessário */
+
     border-top: 3px solid #FF6F3D;
     border-top-left-radius: 80px;
     border-top-right-radius: 80px;
@@ -289,6 +291,93 @@ body{
     color: #666;
 }
 
+.cards-container2 {
+    font-family: "Heebo";
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    gap: 0px;
+}
+
+.card2 {
+    position: relative;
+    width: 250px; /* ajuste conforme necessário */
+    height: 400px; /* ajuste conforme necessário */
+    overflow: hidden;
+    border-radius: 10px; /* bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* sombra para os cards */
+}
+
+.card2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* bordas arredondadas na imagem */
+    padding-bottom: 50px;
+
+}
+
+.label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background: rgba(255, 255, 255, 0.2); /* efeito de vidro transparente */
+    backdrop-filter: blur(10px); /* blur para o efeito de vidro */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    
+    /* Novo código para centralização vertical */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.exportações h2 {
+    font-family: 'Heebo';
+    font-size: 18px;
+    font-weight: 700;
+    color: #4d4d4d;
+    text-align: left; 
+}
+
+
+.cards-exportações {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+.cards-exportações img {
+    align-items: center;
+}
+
+.exportações .card2 img {
+    height: 400px;
+}
+
+.exportações .card2 h2 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+
+
 /* Responsivo para telas menores */
 @media (max-width: 768px) {
     .exportações h2 {
@@ -335,9 +424,27 @@ body{
         width: 100%;
         font-size: 14px;
     }
+
     .card {
         width: calc(50% - 40px); /* Ajusta para 2 cards por linha */
     }
+
+    .card2 {
+        width: calc(50% - 40px); /* Ajusta para 2 cards por linha */
+    }
+
+    .cards-container2 {
+        margin-left: 0;
+        margin-right: 0
+        padding-bottom: 60px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 90vw;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
 
     .cards-container {
         width: 90vw;
@@ -346,7 +453,7 @@ body{
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 280px) and (max-width: 480px) {
     .capa img {
         height: 100px;
     }
@@ -358,45 +465,22 @@ body{
     .card {
         width: calc(100% - 40px); /* Ajusta para 1 card por linha */
     }
+
+    .card2 {
+        width: calc(100% - 40px);
+        height: 250px; /* Altura reduzida para mobile */
+    }
+
+    .card2 img {
+        height: 100%; /* Ajuste a imagem para a nova altura */
+        object-fit: cover; /* Manter proporção e centralizar */
+    }
+
+    .cards-container2 {
+        padding-bottom: 60px;
+    }
 }
 
-.exportações h2 {
-    font-family: 'Heebo';
-    font-size: 18px;
-    font-weight: 700;
-    color: #4d4d4d;
-    text-align: left; 
-}
-
-
-.cards-exportações {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 50px;
-}
-
-.cards-exportações img {
-    align-items: center;
-}
-
-.exportações .card img {
-    height: 400px;
-}
-
-.exportações .card h2 {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-}
 
 
 .custom-footer {
@@ -558,6 +642,10 @@ body{
         background-image: url('imagens/footer-mobile.png');
         background-size: cover;
         background-position: center;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
     }
     .footer-columns {
         align-items: center;

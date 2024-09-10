@@ -4,6 +4,19 @@ const selectorImages = document.querySelectorAll('.selector-image');
 // Seleciona o elemento da imagem de fundo principal
 const mainBackground = document.getElementById('main-background');
 
+// Função para selecionar a imagem inicial ao carregar a página
+window.addEventListener('load', () => {
+    // Seleciona a primeira imagem
+    const firstImage = selectorImages[0];
+    
+    // Adiciona a classe 'selected' na primeira miniatura
+    firstImage.classList.add('selected');
+    
+    // Atualiza a imagem de fundo principal com o 'data-background' da primeira imagem
+    const initialBackground = firstImage.getAttribute('data-background');
+    mainBackground.src = initialBackground;
+});
+
 // Adiciona um evento de clique em cada imagem de seleção
 selectorImages.forEach(image => {
     image.addEventListener('click', () => {

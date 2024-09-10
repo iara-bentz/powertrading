@@ -51,7 +51,8 @@ body{
 }
 
 .tradingview-widget-container {
-    margin-top: 89px;
+    margin-top: -70px;
+    margin-bottom: 200px;
     background-color: #fff;
     border: 1px solid #F37C27;
     z-index: 2;
@@ -86,8 +87,8 @@ body{
 }
 
 .logo img {
-    width: 20vw; /* Ajuste o tamanho em relação à largura da tela */
-    max-width: 200px; /* Tamanho máximo para telas maiores */
+    width: 18vw; 
+    max-width: 160px; 
     min-width: 50px; /* Tamanho mínimo para telas menores */
     height: auto; /* Mantém a proporção da imagem */
 }
@@ -160,7 +161,8 @@ body{
 }
 
 
-section .banner{   
+section .banner{  
+    margin-top: 100px; 
     position: relative;
     width: 100vw;
     height: 89vh;

@@ -417,7 +417,7 @@ section .map-text {
     text-align: center;
     width: 50%;
     font-family: 'Heebo';
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: #3b3b3b;
     margin: 0 auto;
@@ -846,6 +846,10 @@ section .map-text {
 .footer-column {
     width: 22%; /* Quatro colunas com espaço entre elas */
     text-align: left; 
+}
+
+.footer-column p {
+    padding-right: 20px;
 }
 
 .footer-column-img img {

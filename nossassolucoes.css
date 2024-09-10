@@ -201,7 +201,7 @@ body{
 .conteudo {
     padding-bottom: 150px; /* Ajuste este valor conforme necessário */
 
-    border-top: 3px solid #FF6F3D;
+    border-top: 3px solid #ff913d;
     border-top-left-radius: 80px;
     border-top-right-radius: 80px;
     margin-top: 5vh; /* Ajuste conforme necessário para garantir que a `conteudo` comece abaixo da capa */
@@ -292,89 +292,90 @@ body{
 }
 
 .cards-container2 {
-    font-family: "Heebo";
-    margin-left: 200px;
-    margin-right: 200px;
-    padding-bottom: 50px;
     display: flex;
-    justify-content:space-between;
-    flex-wrap: wrap;
-    gap: 0px;
+    gap: 50px;
+    justify-content: center;
 }
 
 .card2 {
     position: relative;
-    width: 250px; /* ajuste conforme necessário */
-    height: 400px; /* ajuste conforme necessário */
+    width: 250px;
+    height: 400px;
+    perspective: 1000px; 
+    cursor: pointer;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.6s ease;
     overflow: hidden;
-    border-radius: 10px; /* bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* sombra para os cards */
+}
+
+.card-front {
+    background-color: #fff;
+}
+
+.card-back {
+    background-color: #fa8933; 
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    transform: rotateY(180deg); 
+}
+
+.card2.flipped .card-front {
+    transform: rotateY(180deg); 
+}
+
+.card2.flipped .card-back {
+    transform: rotateY(0deg); 
 }
 
 .card2 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px; /* bordas arredondadas na imagem */
-    padding-bottom: 50px;
-
+    border-radius: 10px;
 }
 
 .label {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: 'Heebo';
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 30%;
     background: rgba(255, 255, 255, 0.2); /* efeito de vidro transparente */
     backdrop-filter: blur(10px); /* blur para o efeito de vidro */
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 10px 0;
     font-size: 1.2rem;
-    
-    /* Novo código para centralização vertical */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-weight: 600;
 }
 
-
-.exportações h2 {
+.card-back h2 {
     font-family: 'Heebo';
-    font-size: 18px;
-    font-weight: 700;
-    color: #4d4d4d;
-    text-align: left; 
+    margin: 0;
+    font-size: 1.5rem;
 }
 
-
-.cards-exportações {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 50px;
-}
-
-.cards-exportações img {
-    align-items: center;
-}
-
-.exportações .card2 img {
-    height: 400px;
-}
-
-.exportações .card2 h2 {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
+.card-back p {
+    font-family: 'Heebo';
+    font-size: 1rem;
 }
 
 
@@ -385,7 +386,7 @@ body{
     }
 
     .conteudo {
-        border-top: 3px solid #FF6F3D;
+        border-top: 3px solid #ff913d;
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
         margin-top: 0vh; /* Ajuste conforme necessário para garantir que a `conteudo` comece abaixo da capa */

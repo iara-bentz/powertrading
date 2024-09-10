@@ -1,0 +1,690 @@
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('fontes/Heebo-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+html, body {
+    overflow-x: hidden;
+    height: 100%; /* Garante que o body ocupe toda a altura da tela */
+    margin: 0;
+}
+
+body{
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    margin: 0;
+}
+
+.navbar {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+
+.navbar.scrolled {
+    backdrop-filter: blur(13px); 
+    background-color: #0000005f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.203);
+}
+
+.navbar.scrolled .nav-links a {
+    color: #ffffff; /* Cor dos links quando o fundo é branco */
+}
+
+.logo img {
+    width: 20vw; /* Ajuste o tamanho em relação à largura da tela */
+    max-width: 200px; /* Tamanho máximo para telas maiores */
+    min-width: 50px; /* Tamanho mínimo para telas menores */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #000000;
+    text-decoration: none;
+    font-family: "Work Sans", system-ui;
+    font-weight: 350;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    background-color: #ff6347;
+    border-radius: 5px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: #000000;
+    margin: 5px 0;
+    border-radius: 2px;
+}
+
+
+.content {
+    padding-top: 35px;
+    align-items: center;
+    min-height: auto;
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        background-color: #fff;
+        z-index: 200;
+    } 
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        border-radius: 0 0 10px 10px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links.active a {
+        color: #000; /* Muda a cor dos links para preto quando o menu está aberto */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .logo img {
+        width: max-content; /* Aumenta a responsividade para telas menores */
+        max-width: 150px; /* Ajuste o máximo para telas pequenas */
+    }
+}
+
+.box {
+    padding-left: 70px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 70px;
+    width: 90vw;
+    gap: 110px;
+    background-size: 40px 40px;
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, #00000064 0.09px, rgba(0, 0, 0, 0) 1px);
+    padding-bottom: 50px;
+  }
+
+.titulo {
+    color: #fb8d48f7;
+    font-family: 'Heebo';
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+.titulo2 {
+    color: #fb8d48f7;
+    font-size: 26px;
+    font-family: 'Heebo';
+    font-weight: 600;
+  }
+
+.paragrafo {
+    margin: 0;
+    padding-top: 0px;
+    color: #010101;
+    font-family: 'Heebo';
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+*::before {
+    content: none;
+  }
+  
+.bx-text {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+  }
+
+.imagem {
+    flex: 1;
+    width: 25vw;
+    margin-right;: 50px
+}
+
+.imagem img {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 70%;
+}
+/* primeira seção responsiva */
+@media (max-width: 768px) {
+    .content {
+        padding: 0;
+        margin-left: 120px;
+        margin-right: 120px;
+        display: flex;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        width: 70vw;
+        gap: 10px;
+    }
+
+    .bx-text {
+        width: 70vw;
+        align-content: center;
+        align-items: center;
+    }
+
+    p.titulo {
+        font-size: 16px;
+        width: 70vw;
+        font-weight: 500;
+    }
+
+    p.titulo2 {
+        font-size: 16px;
+        width: 70vw;
+        font-weight: 500;
+    }
+
+    .bx-text p.paragrafo {
+        font-size: 10;
+        width: 70vw;
+        padding-top: 0;
+    }
+
+    .bx-image img{
+        padding-top: 20px;
+        align-self: center;
+    }
+    .imagem {
+        width: 100vw;
+    }
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    padding: 60px 20px;
+    background: url('imagens/armazenamento100.jpg') no-repeat center center/cover;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 700px; /* Ajuste conforme necessário para garantir altura suficiente */
+}
+
+.hero-title {
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    color: #fb8d48f7;
+    font-family: 'Heebo';
+    font-size: 32px; 
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.31); 
+    z-index: 1; 
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px); /* 3 colunas de 300px cada */
+    grid-template-rows: repeat(2, 300px); /* 2 linhas de 300px cada */
+    gap: 0; 
+    position: relative;
+    z-index: 1;
+    margin-top: 80px;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer; /* Adiciona a indicação de que o elemento é clicável */
+}
+
+.card .front, .card .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.card .front {
+    background-color: #ffffff3c;
+    border: 0.2px solid #ffffff3a;
+    font-family: 'Heebo';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .front img {
+    padding-bottom: 10px;
+    max-width: 100px; /* Ajuste o tamanho do emoji conforme necessário */
+    margin-bottom: 10px; /* Espaçamento entre o emoji e o título */
+}
+
+.card .front h3 {
+    font-family: 'Heebo';
+    font-size: 16px;
+    font-weight: 700;
+    color: #131111;
+    margin: 0;
+}
+
+.card .back {
+    font-family: 'Heebo';
+    transform: rotateY(180deg);
+    background: #fb8d48f7;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card .back h3, .card .back p {
+    margin: 20px; 
+    font-weight: 600;
+}
+
+.card.flipped .front {
+    transform: rotateY(180deg);
+}
+
+.card.flipped .back {
+    transform: rotateY(0deg);
+}
+
+.card:hover {
+    transform: scale(1.1);
+    z-index: 2;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao cartão */
+}
+
+/* responsividade para dispositivos mobile e tablets */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 24px; 
+        text-align: center;
+        padding-left: 0;
+        padding-top: 10px;
+        left: 50%;
+        transform: translateX(-50%); /* Centraliza o título horizontalmente */
+        width: 100%; /* Garante que o título ocupe toda a largura */
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 200px); /* 2 colunas de 200px cada */
+        grid-template-rows: repeat(3, 200px); /* 3 linhas de 200px cada */
+        justify-content: center; /* Centraliza os cards */
+        margin-top: 60px; /* Ajusta o espaçamento do título */
+    }
+
+    .card {
+        width: 200px; /* Ajusta o tamanho dos cartões para 200px */
+        height: 200px;
+    }
+
+    .card .front img {
+        max-width: 80px; /* Ajusta o tamanho do emoji */
+        margin-bottom: 5px; /* Ajusta o espaçamento entre o emoji e o título */
+    }
+
+    .card .front h3 {
+        padding: 20px;
+        font-size: 14px; /* Ajusta o tamanho da fonte do título dos cards */
+    }
+
+    .card .back {
+        padding: 10px; /* Ajusta o padding para textos mais curtos em telas menores */
+        font-size: 14px; /* Ajusta o tamanho da fonte do texto de trás dos cards */
+    }
+}
+
+@media (max-width: 445px) {
+    .card .front, .card .back {
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        background: rgba(255, 255, 255, 0.1); /* Fallback para navegadores sem suporte */
+        background-color: rgba(255, 255, 255, 0.3); /* Fallback */
+    }
+
+    .card {
+        width: 150px; /* Ajusta o tamanho dos cartões para 200px */
+        height: 150px;
+    }
+
+    .card .front img {
+        max-width: 40px; /* Ajusta o tamanho do emoji */
+        margin-bottom: 0;
+        margin-top: 20px;
+        padding-bottom: 0;
+    }
+
+    .card .back p {
+        font-size: 10px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 150px); 
+        grid-template-rows: repeat(3, 150px); 
+        justify-content: center;
+    }
+
+}
+
+
+.custom-footer {
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Heebo';
+    padding: 60px 60px 20px 60px; /* Reduza o padding superior e inferior para diminuir a altura */
+    color: #ffffff;
+    color: white;
+}
+
+.footer-column-img {
+    translate: 0 -30px;
+}
+
+
+.line {
+    border-top: 0.5px solid white;
+    margin-bottom: 0px;
+}
+
+.footer-content {
+    padding-right: 50px;
+    max-width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-columns {
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 30px;
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+}
+
+.footer-column {
+    width: 22%; /* Quatro colunas com espaço entre elas */
+    text-align: left; 
+}
+
+.footer-column-img img {
+    display: block;
+    margin: 0 auto 10px auto; /* Centralizar as imagens na coluna */
+}
+
+.footer-column-img .logo {
+    width: 60%;
+}
+
+.footer-column-img .iso {
+    width: 45%;
+}
+
+.footer-column ul {
+    font-weight: 500;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-columns {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+}
+
+.footer-column {
+    font-size: 18px;
+    width: 22%; /* Quatro colunas com espaço entre elas */
+    text-align: left; 
+    margin-top: 0px; /* Adiciona espaço na parte superior */
+}
+
+
+.footer-column-p p {
+    font-size: 18px;
+    text-align: left;
+    font-weight: 400;
+    line-height: 0.7; /* Ajusta o espaçamento entre linhas para maior legibilidade */
+}
+
+
+.social-lines {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre os ícones e as linhas */
+    padding-left: 20px; /* Mesmo padding da linha de cima */
+    padding-right: 20px; /* Mesmo padding da linha de cima */
+}
+
+.social-lines hr {
+    flex-grow: 1; /* Faz com que as linhas cresçam para preencher o espaço disponível */
+    border: 0;
+    border-top: 1px solid white;
+    margin: 0; /* Remove margin extra para garantir alinhamento */
+}
+
+.social-icons {
+    display: flex;
+    gap: 0px; /* Espaçamento entre os ícones */
+}
+
+.social-icons a img {
+    width: 34px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.5s ease, filter 0.5s ease; /* Suaviza a transição */
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do ícone */
+    filter: brightness(1.5); /* Aumenta o brilho para destacar */
+}
+
+.footer-tagline {
+    font-family: 'Cormorant Unicase';
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.footer-copyright {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0px;
+    font-size: 12px;
+}
+
+
+
+/* Responsivo para telas até 1000px */
+@media (min-width: 300px) and (max-width: 1000px) {
+    .custom-footer {
+        background-color: #000;
+        background-size: cover;
+        background-position: center;
+    }
+    .footer-columns {
+        align-items: center;
+        flex-direction: column;
+        width: 80vw;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .footer-column {
+        gap: 0;
+        text-align: center;
+        width: 100%;
+        line-height: 0.5;
+        align-items: center;
+    }
+
+    .footer-column-img {
+        width: 100vw;
+        flex-direction: row;
+        align-self: center;
+
+    }
+
+    .footer-column-img .logo {
+        width: 200px;
+    }
+
+    .footer-column-img .iso {
+        width: 120px;
+        translate: 0 -20px;
+    }
+
+    .footer-column ul li {
+        font-size: 14px;
+        line-height: 0.5;
+    }
+
+    .footer-column-p {
+        width: 100%;
+    }
+
+    .footer-column-p p {
+        text-align: center;
+        font-size: 12px;
+        line-height: 0.5;
+    }
+
+    .social-icons a {
+        padding-top: 20px;
+    }
+
+
+    .footer-tagline {
+        font-size: 12px;
+        width: 100vw;
+        text-align: center;
+        align-self: center;
+    }
+}
+
+

@@ -809,7 +809,7 @@ section .map-text {
   
 
 .custom-footer {
-    background-image: url('imagens/fundo-footer.png');
+    background-color: #000;
     background-size: cover;
     background-position: center;
     font-family: 'Heebo';

@@ -221,7 +221,7 @@ body {
 
 
 .form-box label {
-    color: #2a2a2ab8;
+    color: #ffffffb8;
     margin-bottom: 5px;
     font-weight: regular;
 }
@@ -229,7 +229,7 @@ body {
 .form-box input,
 .form-box textarea {
     border: none;
-    border-bottom: 0.5px solid #0000003a;
+    border-bottom: 0.5px solid #ffffff3a;
     background: transparent;
     padding: 10px 0;
     margin-bottom: 20px;
@@ -290,10 +290,9 @@ body {
     transform: translateY(0); 
 }
 
-/* Estilo dos inputs e textarea */
 input[type="text"], input[type="email"], textarea {
     border: none;
-    border-bottom: 0.5px solid #00000033; /* Linha inferior */
+    border-bottom: 0.5px solid #ffffff33; /* Linha inferior */
     background: transparent;
     box-sizing: border-box;
     width: 90%;
@@ -470,7 +469,8 @@ button img {
 
 
 .custom-footer {
-    background-image: url('imagens/fundo-footer.png');
+    z-index: 3;
+    background-color: #000;
     background-size: cover;
     background-position: center;
     font-family: 'Heebo';
@@ -627,6 +627,7 @@ button img {
 @media (min-width: 300px) and (max-width: 1000px) {
     .custom-footer {
         background-image: url('imagens/footer-mobile.png');
+        width: 100vw;
         background-size: cover;
         background-position: center;
     }

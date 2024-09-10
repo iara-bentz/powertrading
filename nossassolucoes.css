@@ -297,6 +297,37 @@ body{
     justify-content: center;
 }
 
+
+/* Estilos do botão Saiba Mais */
+.learn-more-btn {
+    background-color: white;
+    color: #ff6600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #fad7c0;
+    color: rgb(0, 0, 0);
+}
+
+.learn-more-btn span {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.learn-more-btn:hover span {
+    transform: translateX(5px); /* Move a flecha um pouco para a direita */
+}
+
 .card2 {
     position: relative;
     width: 250px;
@@ -486,7 +517,7 @@ body{
 
 .custom-footer {
     z-index: 8;
-    background-image: url('imagens/fundo-footer.png');
+    background-color: #000;
     background-size: cover;
     background-position: center;
     font-family: 'Heebo';

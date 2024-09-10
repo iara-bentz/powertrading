@@ -467,7 +467,7 @@ body{
 
 
 .custom-footer {
-    background-image: url('imagens/fundo-footer.png');
+    background-color: #000;
     background-size: cover;
     background-position: center;
     font-family: 'Heebo';
@@ -623,7 +623,7 @@ body{
 /* Responsivo para telas até 1000px */
 @media (min-width: 300px) and (max-width: 1000px) {
     .custom-footer {
-        background-image: url('imagens/footer-mobile.png');
+        background-color: #000;
         background-size: cover;
         background-position: center;
     }

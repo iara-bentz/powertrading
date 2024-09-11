@@ -465,7 +465,6 @@ body{
 
 }
 
-
 .custom-footer {
     background-color: #000;
     background-size: cover;
@@ -475,6 +474,7 @@ body{
     color: #ffffff;
     color: white;
 }
+
 
 .footer-column-img {
     translate: 0 -30px;
@@ -487,7 +487,6 @@ body{
 }
 
 .footer-content {
-    padding-right: 50px;
     max-width: 100vw;
     margin: 0 auto;
     text-align: center;
@@ -618,21 +617,17 @@ body{
     font-size: 12px;
 }
 
-
-
-/* Responsivo para telas até 1000px */
-@media (min-width: 300px) and (max-width: 1000px) {
+@media (max-width: 780px) {
     .custom-footer {
         background-color: #000;
         background-size: cover;
         background-position: center;
     }
     .footer-columns {
+        align-content: center;
         align-items: center;
         flex-direction: column;
-        width: 80vw;
-        padding-left: 50px;
-        padding-right: 50px;
+        width: 100%;
     }
 
     .footer-column {
@@ -647,16 +642,10 @@ body{
         width: 100vw;
         flex-direction: row;
         align-self: center;
-
     }
 
     .footer-column-img .logo {
         width: 200px;
-    }
-
-    .footer-column-img .iso {
-        width: 120px;
-        translate: 0 -20px;
     }
 
     .footer-column ul li {
@@ -671,6 +660,7 @@ body{
     .footer-column-p p {
         text-align: center;
         font-size: 12px;
+        font-weight: 200;
         line-height: 0.5;
     }
 
@@ -686,5 +676,3 @@ body{
         align-self: center;
     }
 }
-
-

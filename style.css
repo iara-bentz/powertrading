@@ -41,6 +41,11 @@ html, body {
     padding: 0;
 }
 
+::-webkit-scrollbar {
+    display: none;
+  }
+
+
 body{
     flex-direction: column;
     width: 100%;
@@ -730,6 +735,7 @@ section .map-text {
 }
 
 .mercado-local {
+    overflow: hidden;
     position: relative;
     width: 100vw; /* Reduz a largura */
     height: 85vh; /* Reduz a altura */
@@ -801,6 +807,7 @@ section .map-text {
   }
   
   .image-selector {
+    overflow-x: scroll;
     z-index: 3;
     position: absolute;
     bottom: 80px;
@@ -853,19 +860,17 @@ section .map-text {
     }
 
     .image-selector {
+        overflow-x: scroll;
+        width: 300px;
+        right: 0;
         display: flex;
         flex-wrap: nowrap; 
-        overflow-x: auto; 
         scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch; /* Rolagem suave no mobile */
-        padding-right: 20px;
-        padding-left: 5px;
+        padding-right: 0;
+        padding-left: 0;
         padding-bottom: 20px;
     }
 
-    .image-selector::-webkit-scrollbar {
-        display: none;
-    }
 
     .image-selector img {
         height: 70px;
@@ -885,6 +890,18 @@ section .map-text {
 
     .mercado-local {
         padding-bottom: 0;
+    }
+
+    .image-selector {
+        overflow-x: scroll;
+        width: 300px;
+        right: 0;
+        display: flex;
+        flex-wrap: nowrap; 
+        scroll-snap-type: x mandatory;
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 20px;
     }
   }
   

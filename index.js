@@ -63,3 +63,56 @@ selectorImages.forEach((image, index) => {
         resetSlideshow(); // Reinicia o slideshow após um tempo de inatividade
     });
 });
+
+
+const imageSelector = document.querySelector('.image-selector');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+// Mouse Down
+imageSelector.addEventListener('mousedown', (e) => {
+    isDown = true;
+    imageSelector.classList.add('active');
+    startX = e.pageX - imageSelector.offsetLeft;
+    scrollLeft = imageSelector.scrollLeft;
+});
+
+// Mouse Leave/Up
+imageSelector.addEventListener('mouseleave', () => {
+    isDown = false;
+    imageSelector.classList.remove('active');
+});
+imageSelector.addEventListener('mouseup', () => {
+    isDown = false;
+    imageSelector.classList.remove('active');
+});
+
+// Mouse Move
+imageSelector.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - imageSelector.offsetLeft;
+    const walk = (x - startX) * 1; // Velocidade de rolagem
+    imageSelector.scrollLeft = scrollLeft - walk;
+});
+
+// Touch (para mobile)
+imageSelector.addEventListener('touchstart', (e) => {
+    isDown = true;
+    startX = e.touches[0].pageX - imageSelector.offsetLeft;
+    scrollLeft = imageSelector.scrollLeft;
+});
+
+imageSelector.addEventListener('touchmove', (e) => {
+    if (!isDown) return;
+    const x = e.touches[0].pageX - imageSelector.offsetLeft;
+    const walk = (x - startX) * 1; // Velocidade de rolagem
+    imageSelector.scrollLeft = scrollLeft - walk;
+});
+
+imageSelector.addEventListener('touchend', () => {
+    isDown = false;
+});
+
+

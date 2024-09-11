@@ -134,6 +134,9 @@ body{
     border-radius: 2px;
 }
 
+.media-container .mobile-image {
+    display: none;
+} 
 
 .back-video {
     position: absolute;
@@ -162,10 +165,10 @@ body{
 
 
 section .banner{  
-    margin-top: 100px; 
+    margin-top: 90px; 
     position: relative;
     width: 100vw;
-    height: 89vh;
+    height: 90vh;
     margin-bottom: 0px;
 }
 
@@ -239,8 +242,27 @@ section .banner{
     color: #ff7104;
 }
 
+.banner .mobile-image {
+    display: block;
+    position: absolute; /* Altera a posição para 'absolute' */
+    width: 100%; /* Faz a imagem cobrir toda a largura */
+    height: 100vh; /* Faz a imagem cobrir toda a altura da tela */
+    top: 0;
+    left: 0; /* Alinha a imagem à esquerda */
+    z-index: -1; /* Coloca a imagem atrás de outros elementos */
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço sem distorção */
+}
+
 /* mobile nav e banner*/
 @media only screen and (max-width: 768px) {
+    .banner .mobile-image {
+        display: block;
+        height: 72vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
 
     #navbar {
         background-color: #fff;
@@ -297,14 +319,13 @@ section .banner{
     .banner .content-h1-newsletter h1 {
         margin-left: 0;
         font-weight: 800;
-        width: 50vw;
-        font-size: 46px;
-        line-height: 48px;
+        width: 70vw;
+        font-size: 38px;
+        line-height: 40px;
     }
 
     .back-video {
-        width: auto;
-        height: 70vh;
+        display: none;
     }
 
     .newsletter-bar {
@@ -339,23 +360,25 @@ section .banner{
     }
     
     .content-h1-newsletter p {
-        padding-top: 0;
+        padding-top: 20px;
         padding-left: 0;
+        font-size: 10px;
     }
 
     .banner .content-h1-newsletter h1 {
         margin-left: 0;
         font-weight: 800;
         width: 50vw;
-        font-size: 36px;
-        line-height: 38px;
+        font-size: 32px;
+        line-height: 36px;
     }
 
     .tradingview-widget-container {
         top: 400px;
+        height: 90px;
+        margin-bottom: 20px;
     }
 }
-
 
 
 conteudo {

@@ -93,7 +93,7 @@ imageSelector.addEventListener('mousemove', (e) => {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - imageSelector.offsetLeft;
-    const walk = (x - startX) * 3; // Velocidade de rolagem
+    const walk = (x - startX) * 0.5; // Velocidade de rolagem
     imageSelector.scrollLeft = scrollLeft - walk;
 });
 
@@ -107,7 +107,7 @@ imageSelector.addEventListener('touchstart', (e) => {
 imageSelector.addEventListener('touchmove', (e) => {
     if (!isDown) return;
     const x = e.touches[0].pageX - imageSelector.offsetLeft;
-    const walk = (x - startX) * 3; // Velocidade de rolagem
+    const walk = (x - startX) * 0.5; // Velocidade de rolagem
     imageSelector.scrollLeft = scrollLeft - walk;
 });
 

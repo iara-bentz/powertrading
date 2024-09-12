@@ -64,7 +64,6 @@ selectorImages.forEach((image, index) => {
     });
 });
 
-
 const imageSelector = document.querySelector('.image-selector');
 let isDown = false;
 let startX;
@@ -114,5 +113,3 @@ imageSelector.addEventListener('touchmove', (e) => {
 imageSelector.addEventListener('touchend', () => {
     isDown = false;
 });
-
-

@@ -41,10 +41,6 @@ html, body {
     padding: 0;
 }
 
-::-webkit-scrollbar {
-    display: none;
-  }
-
 
 body{
     flex-direction: column;
@@ -417,60 +413,44 @@ conteudo {
     justify-content: center;
 }
 
-section .map {
-    width: 100vw;
-}
-
-section .map img {
-    width: 600px;
-}
-
-section .map-text {
-    margin: 20px;
-    padding-bottom: 60px;
-}
-
 .map-content {
     z-index: 3;
-    background: linear-gradient(to bottom, #FFFFFF, #DCD5CD);
-    height: 600px;
+    height: 80vh;
     margin-bottom: 0;
     position: relative;
     padding-bottom: 150px;
-    background-size: 40px 40px;
-    background-size: 40px 40px;
-    background-image: radial-gradient(circle, #00000064 0.09px, rgba(0, 0, 0, 0) 1px);
-}
 
-.map-content .map {
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    padding-bottom: 50px;
-}
-
-.map-content .map img {
-    width: 50%;
 }
 
 .map-text {
+    background-image: url('imagens/mapa (3).png');
+    height: 80vh;
     padding-top: 50px;
     text-align: center;
 }
 
-.map-text h2 {
-    width: 50%;
+
+
+.map-text .title { 
+    text-align: center; 
+    font-family: 'Heebo', sans-serif;
+    font-size: 82px;
+    font-weight: 800;
+    z-index: 1;
+    color: #000; 
+    width: 100%;
     font-family: 'Heebo';
-    font-size: 52px;
-    font-weight: 700;
-    line-height: 1.05;
     margin: 0 auto;
+    line-height: 1;
+}
+
+.map-text .highlight {
+    color: #F37C27;
 }
 
 .map-text p {
     text-align: center;
-    width: 50%;
+    width: 65%;
     font-family: 'Heebo';
     font-size: 16px;
     font-weight: 400;
@@ -478,6 +458,60 @@ section .map-text {
     margin: 0 auto;
     margin-top: 10px;
 }
+
+/* Centralizando a seção */
+.cards-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Espaçamento entre os cards */
+    padding: 20px;
+    padding-top: 100px;
+  }
+  
+  /* Estilo base dos cards */
+  .card {
+    font-family: 'Heebo';
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 200px;
+    border-radius: 0px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    color: white;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Card do meio maior e laranja */
+  .card-middle {
+    background-color: #F37C27;
+    width: 180px;
+    height: 240px;
+    transform: scale(1.1); /* Como se estivesse mais para frente */
+  }
+  
+  /* Cards laterais pretos */
+  .card-left, .card-right {
+    background-color: black;
+  }
+  
+  /* Estilização do texto */
+  .card h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .card p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+  }
+  
 
 
 /* mobile mapa*/
@@ -790,7 +824,7 @@ section .map-text {
     margin-block-end: 0;
   }
   
-  .title .highlight {
+  .title-container .title .highlight {
     color: #ff7104;
   }
   
@@ -817,6 +851,11 @@ section .map-text {
     padding-bottom: 30px;
     padding-right: 30px;
   }
+
+  .image-selector::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem */
+}
+
   
   .selector-image {
     width: auto;
@@ -997,8 +1036,8 @@ section .map-text {
 .footer-column-p p {
     font-size: 18px;
     text-align: left;
-    font-weight: 400;
-    line-height: 0.7; /* Ajusta o espaçamento entre linhas para maior legibilidade */
+    font-weight: 200;
+    line-height: 0.2; /* Ajusta o espaçamento entre linhas para maior legibilidade */
 }
 
 

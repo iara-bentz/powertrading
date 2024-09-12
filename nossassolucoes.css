@@ -38,7 +38,10 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+
 }
+
+
 
 body{
     flex-direction: column;
@@ -178,13 +181,16 @@ body{
     position: absolute;
     position: relative;
     width: 100vw;
-    height: 32vh;
+    height: 62vh;
+    overflow: hidden;
 }
 
 .capa img {
     padding-top: 50px;
     width: 100vw;
-    position: absolute;
+    height: auto;
+    object-fit: cover;
+    position: relative;
 }
 
 .capa label {
@@ -200,30 +206,24 @@ body{
 
 .conteudo {
     padding-bottom: 150px; /* Ajuste este valor conforme necessário */
-
     border-top: 3px solid #ff913d;
     border-top-left-radius: 80px;
     border-top-right-radius: 80px;
-    margin-top: 5vh; /* Ajuste conforme necessário para garantir que a `conteudo` comece abaixo da capa */
+    margin-top: -100px; /* Ajuste conforme necessário para garantir que a `conteudo` comece abaixo da capa */
     background-color: #fff;
     position: relative;
     min-height: calc(100vh - 40px);
-    overflow: auto;
 }
 
 
 .texto-operações {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    padding-top: 10px;
     display: flex;
-    align-items: flex-start;
-    width: 70vw;
-    padding-top: 50px;
-    display: flex;
-    flex-direction: row; 
     justify-content: center; 
-    gap: 90px;
-    margin: 0 auto;
-    margin-bottom: 50px; /* Adiciona espaço abaixo do texto para os cards */
-
 }
 
 
@@ -240,19 +240,17 @@ body{
     line-height: 1;
     font-weight: 700;
     color: #ff913d;
-    text-align: left; 
 }
 
 .texto-operações p {
     font-family: 'Heebo';
     font-size: 16px;
     color: #363636;
-    text-align: left; 
 }
 
 
 .cards-container {
-    padding-bottom: 60px;
+    padding-bottom: 10px;
     font-family: 'Heebo';
     display: flex;
     flex-direction: row;
@@ -261,7 +259,7 @@ body{
     gap: 20px;
     width: 100%;
     box-sizing: border-box;
-    margin-top: 50px; /* Adicione um margin-top para dar espaço extra se necessário */
+    margin-top: 20px; /* Adicione um margin-top para dar espaço extra se necessário */
 }
 
 
@@ -282,7 +280,6 @@ body{
 }
 .cards-container h2 {
     font-size: 16px;
-    margin-bottom: 10px;
     color: #333;
 }
 
@@ -292,6 +289,7 @@ body{
 }
 
 .cards-container2 {
+    margin-top: 20px;
     display: flex;
     gap: 50px;
     justify-content: center;

@@ -14,14 +14,49 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- Google Translate API -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'pt',
+                    includedLanguages: 'en,es,pt,zh-TW,ar'
+                }, 'google_translate_element');
+            }
+    
+            function changeLanguage(lang, flagSrc) {
+                var translateElement = document.querySelector('.goog-te-combo');
+                if (translateElement) {
+                    translateElement.value = lang;
+                    translateElement.dispatchEvent(new Event('change'));
+                    document.getElementById('selected-language').src = flagSrc;
+                }
+            }
+        </script>
+        
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </head>
 
 
     <body>
         <nav class="navbar transparent" id="navbar">
             <div class="logo"><img src="imagens/logo.png"></div>
+            <div id="google_translate_element" class="translate-icon"></div>
+            <!-- Seletor de idiomas com dropdown de bandeiras -->
+            <div class="language-dropdown">
+                <!-- Bandeira principal que será exibida -->
+                <img src="imagens/bandeiras/portugues.png" alt="Português" class="language-selected" id="selected-language">
+                
+                <!-- Bandeiras no dropdown (que aparecem ao clicar) -->
+                <div class="dropdown-content">
+                    <img src="imagens/bandeiras/ingles.png" alt="English" onclick="changeLanguage('en', 'imagens/bandeiras/ingles.png')">
+                    <img src="imagens/bandeiras/espanhol.png" alt="Español" onclick="changeLanguage('es', 'imagens/bandeiras/espanhol.png')">
+                    <img src="imagens/bandeiras/portugues.png" alt="Português" onclick="changeLanguage('pt', 'imagens/bandeiras/portugues.png')">
+                    <img src="imagens/bandeiras/chines.png" alt="中文" onclick="changeLanguage('zh-TW', 'imagens/bandeiras/chines.png')"> 
+                    <img src="imagens/bandeiras/arabe.png" alt="العربية" onclick="changeLanguage('ar', 'imagens/bandeiras/arabe.png')"> 
+                </div>
+            </div>
             <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Início</a></li>
                 <li><a href="nossassolucoes.html">Nossas Soluções</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="ondeestamos.html">Onde Estamos</a></li>
@@ -202,7 +237,6 @@
                     </div>
                 </div>
             </footer>
-              
 
         <script>
             window.onscroll = function() {

@@ -35,7 +35,6 @@
 
 html, body {
     overflow-x: hidden;
-
     height: 100%;
     margin: 0;
     padding: 0;
@@ -51,6 +50,11 @@ body{
     margin: 0;
 }
 
+
+body {
+    top: 0px !important;
+}
+
 .tradingview-widget-container {
     margin-bottom: 20px;
     background-color: #fff;
@@ -58,11 +62,88 @@ body{
     z-index: 2;
 }
 
+.skiptranslate,
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+
+#google_translate_element {
+    display: none;
+}
+
+.translate-icon {
+    position: absolute; 
+    top: 10px; /* Ajuste a posição conforme necessário */
+    right: 10px;
+    z-index: 9999; 
+    margin-right: 200px;
+}
+
+.language-dropdown {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.language-selected {
+    width: 32px;
+    cursor: pointer;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Transição para animação de rotação */
+}
+
+/* Estilo para as bandeirinhas no dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 40px; /* Posiciona abaixo da bandeira principal */
+    min-width: 50px;
+    z-index: 1;
+    opacity: 0; /* Inicialmente invisível */
+    transform: scaleY(0); /* Inicialmente colapsado */
+    transform-origin: top; /* Animação ocorre a partir do topo */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transições para animação */
+}
+
+/* Estilo para as bandeiras dentro do dropdown */
+.dropdown-content img {
+    width: 32px;
+    cursor: pointer;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+/* Estilo para a bandeira principal quando o dropdown está ativo */
+.language-dropdown:hover .language-selected {
+    transform: rotate(180deg); /* Rotaciona a bandeira para indicar que o dropdown está aberto */
+}
+
+/* Mostrar o dropdown quando o usuário passa o mouse */
+.language-dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: scaleY(1); /* Expande o dropdown */
+}
+
+/* Mostrar o dropdown quando o usuário clica (ajuste se necessário) */
+.language-dropdown .dropdown-content {
+    display: block; /* Mantém o dropdown visível após o clique */
+}
+
+/* Estilo para o estado ativo do dropdown após seleção */
+.language-dropdown.active .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: scaleY(1);
+}
 
 .navbar {
     background-color: #fff;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
     position: fixed;
@@ -74,6 +155,12 @@ body{
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
     z-index: 30;
+}
+
+.navbar-logo,
+.navbar-language,
+.navbar-nav {
+    flex: 1; /* Cada container ocupa 1/3 da largura disponível */
 }
 
 
@@ -95,6 +182,9 @@ body{
 }
 
 .nav-links {
+    white-space: nowrap;
+    width: auto;
+    justify-content: flex-end;
     list-style: none;
     display: flex;
     margin: 0;
@@ -161,7 +251,7 @@ body{
 }
 
 /* Para dispositivos grandes */
-@media (min-width: 780px) {
+@media (min-width: 780px){
     .banner .mobile-image {
         display: none; /* Certifica-se que a imagem de substituição seja escondida */
         opacity: 0;
@@ -348,7 +438,7 @@ section .banner{
         opacity: 0;
     }
 
-    .newsletter-bar {
+     .newsletter-bar {
         height: 35px;
         width: 180px;
         padding-left: 0;
@@ -369,8 +459,22 @@ section .banner{
 
 /* mobile menor nv e banner */
 @media (min-width: 300px) and (max-width: 480px) {
+    .back-video {
+        display: none;
+        opacity: 0;
+    }
+
     section .banner {
         height: 72vh;
+    }
+
+    .banner .mobile-image {
+        display: block;
+        height: 72vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
     }
 
     .back-video {
@@ -384,7 +488,7 @@ section .banner{
         margin-top: 100px;
         margin-left: 25px;
     }
-    
+
     .content-h1-newsletter p {
         padding-top: 20px;
         padding-left: 0;
@@ -399,10 +503,8 @@ section .banner{
         line-height: 36px;
     }
 
-    .tradingview-widget-container {
-        top: 400px;
-        height: 90px;
-        margin-bottom: 20px;
+    .newsletter-bar {
+        padding-left: 0;
     }
 }
 
@@ -434,7 +536,7 @@ conteudo {
 .map-text .title { 
     text-align: center; 
     font-family: 'Heebo', sans-serif;
-    font-size: 82px;
+    font-size: 74px;
     font-weight: 800;
     z-index: 1;
     color: #000; 
@@ -459,17 +561,15 @@ conteudo {
     margin-top: 10px;
 }
 
-/* Centralizando a seção */
 .cards-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px; /* Espaçamento entre os cards */
+    gap: 50px; 
     padding: 20px;
     padding-top: 100px;
   }
   
-  /* Estilo base dos cards */
   .card {
     font-family: 'Heebo';
     padding-left: 20px;
@@ -481,12 +581,11 @@ conteudo {
     width: 150px;
     height: 200px;
     border-radius: 0px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
     color: white;
     transition: transform 0.3s ease;
   }
   
-  /* Card do meio maior e laranja */
   .card-middle {
     background-color: #F37C27;
     width: 180px;
@@ -494,14 +593,12 @@ conteudo {
     transform: scale(1.1); /* Como se estivesse mais para frente */
   }
   
-  /* Cards laterais pretos */
   .card-left, .card-right {
     background-color: black;
   }
   
-  /* Estilização do texto */
   .card h1 {
-    font-size: 2.5rem;
+    font-size: 32px;
     margin: 0;
   }
   
@@ -515,20 +612,31 @@ conteudo {
 
 
 /* mobile mapa*/
-@media (max-width: 780px) {
-    section .map-text {
-        padding-bottom: 0;
-        padding-left: 20px;
-        padding-right: 20px;
+@media (min-width: 300px) and (max-width: 780px) {
+    .map-text {
+        background-position: center;
+        background-size: cover;
+        box-sizing: border-box;
+        padding-bottom: 20px;
+        height: auto;
+        margin-left: 20px;
+        margin-right: 20px;
     }
-    .map-text h2 {
+
+    .map-text .title {
         font-size: 26px;
         width: 80%;
     }
 
     .map-text p {
-        width: 70%;
+        padding-top: 1  0px;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 20px;
+        padding-right: 20px;
         font-size: 12px;
+        box-sizing: border-box;
     }
 
     .map-content .map {
@@ -539,12 +647,32 @@ conteudo {
         z-index: 3;
         width: 100vw;
     }
+
     .map-content {
-        height: 400px;
+        height: auto;
         padding-bottom: 0;
     }
-}
 
+    .cards-section {
+        padding-top: 30px;
+        flex-direction: column;
+        margin: auto;
+        box-sizing: border-box;
+        width: 100VW;
+    }
+
+    .cards-section .card {
+        width: 180px;
+    }
+
+    .crad h1 {
+        font-size: 28px;
+    }
+
+    .card p {
+
+    }
+}
 .globo {
     position: relative;
     width: 100%;
@@ -813,7 +941,7 @@ conteudo {
     text-align: center; 
     margin-top: -350px;
     font-family: 'Heebo', sans-serif;
-    font-size: 82px;
+    font-size: 74px;
     font-weight: 700;
     z-index: 1;
   }

@@ -1,3 +1,21 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const languageDropdown = document.querySelector('.language-dropdown');
+    const languageSelected = document.querySelector('.language-selected');
+
+    languageSelected.addEventListener('click', () => {
+        languageDropdown.classList.toggle('active');
+    });
+
+    // Fecha o dropdown quando clica fora dele
+    document.addEventListener('click', (event) => {
+        if (!languageDropdown.contains(event.target)) {
+            languageDropdown.classList.remove('active');
+        }
+    });
+});
+
+
+
 // Seleciona todas as imagens de seleção
 const selectorImages = document.querySelectorAll('.selector-image');
 
@@ -113,3 +131,6 @@ imageSelector.addEventListener('touchmove', (e) => {
 imageSelector.addEventListener('touchend', () => {
     isDown = false;
 });
+
+
+  

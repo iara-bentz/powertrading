@@ -235,6 +235,8 @@ body{
 
 
 .texto-operações h2 {
+    padding-top: 30px;
+    margin: 0;
     font-family: 'Heebo';
     font-size: 32px;
     line-height: 1;

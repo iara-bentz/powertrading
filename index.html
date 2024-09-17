@@ -17,20 +17,64 @@
         <!-- Google Translate API -->
         <script type="text/javascript">
             function googleTranslateElementInit() {
-                new google.translate.TranslateElement({
-                    pageLanguage: 'pt',
-                    includedLanguages: 'en,es,pt,zh-TW,ar'
-                }, 'google_translate_element');
-            }
-    
-            function changeLanguage(lang, flagSrc) {
-                var translateElement = document.querySelector('.goog-te-combo');
-                if (translateElement) {
-                    translateElement.value = lang;
-                    translateElement.dispatchEvent(new Event('change'));
-                    document.getElementById('selected-language').src = flagSrc;
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'pt',
+                        includedLanguages: 'en,es,pt,zh-CN,ar'
+                    }, 'google_translate_element');
+
+                    // Recupera o idioma e a bandeira salvos no localStorage, se existirem
+                    const savedLang = localStorage.getItem('selectedLanguage');
+                    const savedFlag = localStorage.getItem('selectedFlag');
+
+                    if (savedLang && savedFlag) {
+                        // Ajusta a bandeira e o idioma automaticamente
+                        document.getElementById('selected-language').src = savedFlag;
+                        changeLanguage(savedLang, savedFlag, false); // O "false" evita a atualização do localStorage novamente
+                    }
                 }
-            }
+
+                // Função para alterar o idioma e salvar a bandeira/idioma
+                function changeLanguage(lang, flagSrc, save = true) {
+                    var translateElement = document.querySelector('.goog-te-combo');
+                    if (translateElement) {
+                        translateElement.value = lang;
+                        translateElement.dispatchEvent(new Event('change'));
+
+                        // Atualiza a bandeira selecionada
+                        document.getElementById('selected-language').src = flagSrc;
+
+                        // Salva o idioma e a bandeira no localStorage se necessário
+                        if (save) {
+                            localStorage.setItem('selectedLanguage', lang);
+                            localStorage.setItem('selectedFlag', flagSrc);
+                        }
+                    }
+                }
+
+                function detectLanguage() {
+                    var langCode = document.documentElement.lang || navigator.language || navigator.userLanguage;
+
+                    switch (langCode) {
+                        case 'en':
+                            document.getElementById('selected-language').src = 'imagens/bandeiras/ingles.png';
+                            break;
+                        case 'es':
+                            document.getElementById('selected-language').src = 'imagens/bandeiras/espanhol.png';
+                            break;
+                        case 'zh-CN':
+                            document.getElementById('selected-language').src = 'imagens/bandeiras/chines.png';
+                            break;
+                        case 'ar':
+                            document.getElementById('selected-language').src = 'imagens/bandeiras/arabe.png';
+                            break;
+                        default:
+                            document.getElementById('selected-language').src = 'imagens/bandeiras/portugues.png';
+                            break;
+                    }
+                }    
+
+                // Inicializa o Google Translate quando a página carrega
+                window.onload = googleTranslateElementInit;
         </script>
         
         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -51,7 +95,7 @@
                     <img src="imagens/bandeiras/ingles.png" alt="English" onclick="changeLanguage('en', 'imagens/bandeiras/ingles.png')">
                     <img src="imagens/bandeiras/espanhol.png" alt="Español" onclick="changeLanguage('es', 'imagens/bandeiras/espanhol.png')">
                     <img src="imagens/bandeiras/portugues.png" alt="Português" onclick="changeLanguage('pt', 'imagens/bandeiras/portugues.png')">
-                    <img src="imagens/bandeiras/chines.png" alt="中文" onclick="changeLanguage('zh-TW', 'imagens/bandeiras/chines.png')"> 
+                    <img src="imagens/bandeiras/chines.png" alt="中文" onclick="changeLanguage('zh-CN', 'imagens/bandeiras/chines.png')"> 
                     <img src="imagens/bandeiras/arabe.png" alt="العربية" onclick="changeLanguage('ar', 'imagens/bandeiras/arabe.png')"> 
                 </div>
             </div>
@@ -66,6 +110,17 @@
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
+            </div>
+
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="close" id="close">&times;</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="nossassolucoes.html">Nossas Soluções</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="ondeestamos.html">Onde Estamos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
             </div>
         </nav>
         
@@ -238,25 +293,25 @@
                 </div>
             </footer>
 
-        <script>
-            window.onscroll = function() {
-                var navbar = document.getElementById("navbar");
-                if (window.pageYOffset > 50) { 
-                    navbar.classList.add("scrolled");
-                } else {
-                    navbar.classList.remove("scrolled");
-                }
-            };
-
-                document.addEventListener("DOMContentLoaded", function() {
-        const hamburger = document.getElementById("hamburger");
-        const navLinks = document.getElementById("nav-links");
-
-        hamburger.addEventListener("click", function() {
-            navLinks.classList.toggle("active");
-        });
-    });
-        </script>
+            <script>
+                window.onscroll = function() {
+                    var navbar = document.getElementById("navbar");
+                    if (window.pageYOffset > 50) { 
+                        navbar.classList.add("scrolled");
+                    } else {
+                        navbar.classList.remove("scrolled");
+                    }
+                };
+            
+                    document.addEventListener("DOMContentLoaded", function() {
+            const hamburger = document.getElementById("hamburger");
+            const navLinks = document.getElementById("nav-links");
+            
+            hamburger.addEventListener("click", function() {
+                navLinks.classList.toggle("active");
+            });
+            });
+            </script>
         <script src="index.js"></script>
     </body>      
     </html>

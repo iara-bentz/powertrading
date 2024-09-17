@@ -42,11 +42,91 @@ body {
     overflow-y: auto;
 }
 
+.skiptranslate,
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+
+#google_translate_element {
+    display: none;
+}
+
+.translate-icon {
+    position: absolute; 
+    top: 10px; /* Ajuste a posição conforme necessário */
+    right: 10px;
+    z-index: 9999; 
+    margin-right: 200px;
+}
+
+.language-dropdown {
+    padding-right: 30px;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.language-selected {
+    width: 32px;
+    cursor: pointer;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Transição para animação de rotação */
+}
+
+/* Estilo para as bandeirinhas no dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 70px; 
+    top: -5px;
+    min-width: 50px;
+    z-index: 1;
+    opacity: 0; /* Inicialmente invisível */
+    transform: scaleY(0); /* Inicialmente colapsado */
+    transform-origin: top; /* Animação ocorre a partir do topo */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transições para animação */
+}
+
+/* Estilo para as bandeiras dentro do dropdown */
+.dropdown-content img {
+    width: 32px;
+    cursor: pointer;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+/* Estilo para a bandeira principal quando o dropdown está ativo */
+.language-dropdown:hover .language-selected {
+    transform: rotate(180deg); /* Rotaciona a bandeira para indicar que o dropdown está aberto */
+}
+
+/* Mostrar o dropdown quando o usuário passa o mouse */
+.language-dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: scaleY(1); /* Expande o dropdown */
+}
+
+/* Mostrar o dropdown quando o usuário clica (ajuste se necessário) */
+.language-dropdown .dropdown-content {
+    display: block; /* Mantém o dropdown visível após o clique */
+}
+
+/* Estilo para o estado ativo do dropdown após seleção */
+.language-dropdown.active .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: scaleY(1);
+}
 
 .navbar {
     background-color: #fff;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
     position: fixed;
@@ -57,28 +137,37 @@ body {
     z-index: 1000;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
-    z-index: 10;
+    z-index: 30;
+}
+
+.navbar-logo,
+.navbar-language,
+.navbar-nav {
+    flex: 1; /* Cada container ocupa 1/3 da largura disponível */
 }
 
 
 .navbar.scrolled {
     backdrop-filter: blur(13px); 
-    background-color: #ffffff5f;
+    background-color: #0000005f;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.203);
 }
 
 .navbar.scrolled .nav-links a {
-    color: #262626; /* Cor dos links quando o fundo é branco */
+    color: #ffffff; /* Cor dos links quando o fundo é branco */
 }
 
 .logo img {
-    width: 20vw; /* Ajuste o tamanho em relação à largura da tela */
-    max-width: 200px; /* Tamanho máximo para telas maiores */
+    width: 18vw; 
+    max-width: 160px; 
     min-width: 50px; /* Tamanho mínimo para telas menores */
     height: auto; /* Mantém a proporção da imagem */
 }
 
 .nav-links {
+    white-space: nowrap;
+    width: auto;
+    justify-content: flex-end;
     list-style: none;
     display: flex;
     margin: 0;
@@ -105,18 +194,80 @@ body {
     border-radius: 5px;
 }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
 .hamburger .line {
     width: 30px;
     height: 3px;
     background-color: #000000;
     margin: 5px 0;
     border-radius: 2px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1010;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Estilos para o menu mobile */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: 100%;
+    background-color: #fff;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px; /* Espaço para o X */
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+.mobile-menu .close {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 15px;
+    text-align: right;
+    width: 100%;
+}
+
+.mobile-menu .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu .nav-links li {
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-menu .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-family: "Work Sans", system-ui;
+    font-weight: 350;
+    font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {
@@ -340,6 +491,7 @@ button {
 
 button img {
     margin-left: 10px;
+    width: 40px;
 }
 
 /* Estilo para o container do botão */
@@ -468,6 +620,7 @@ button img {
 }
 
 .custom-footer {
+    z-index: 300;
     background-color: #000;
     background-size: cover;
     background-position: center;

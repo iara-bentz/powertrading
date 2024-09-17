@@ -57,22 +57,22 @@ document.addEventListener("DOMContentLoaded", function() {
       },
       "alemanha": {
         nome: "ALEMANHA",
-        endereco: "2039, OLD MIDDLEBURG - RD N - JACKSONVILLE, FL 32210",
+        endereco: "GREIFSWALDER STR. 226, 10405 4º FLOOR BERLIN, GERMANY",
         imagem: "imagens/ALEMANHA.jpg"
       },
       "singapura": {
         nome: "SINGAPURA",
-        endereco: "2039, OLD MIDDLEBURG - RD N - JACKSONVILLE, FL 32210",
+        endereco: "9 RAFFLES PL, #29-05 REPUBLIC PLAZA, SINGAPORE 048619",
         imagem: "imagens/SINGAPURA.jpg"
       },
       "china": {
         nome: "CHINA",
-        endereco: "2039, OLD MIDDLEBURG - RD N - JACKSONVILLE, FL 32210",
+        endereco: "LUJIAZUI TAIKOO LI QIANTAN CBD BUSINESS CENTERAL AREA TOWER A – 25TH FLOOR - PUDONG NEW DISTRICT, SHANGHAI CITY, P.R.CHINA",
         imagem: "imagens/CHINA.jpg"
       },
       "dubai": {
         nome: "DUBAI",
-        endereco: "2039, OLD MIDDLEBURG - RD N - JACKSONVILLE, FL 32210",
+        endereco: "BOULEVARD PLAZA TOWER 1 OFFICE NO. 2202. DUBAI – UAE",
         imagem: "imagens/DUBAI.jpg"
       }
     };

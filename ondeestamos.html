@@ -7,70 +7,58 @@
         <title>Power trading</title>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
-                <!-- Google Translate API -->
-                <script type="text/javascript">
-                    function googleTranslateElementInit() {
-                            new google.translate.TranslateElement({
-                                pageLanguage: 'pt',
-                                includedLanguages: 'en,es,pt,zh-CN,ar'
-                            }, 'google_translate_element');
-        
-                            // Recupera o idioma e a bandeira salvos no localStorage, se existirem
-                            const savedLang = localStorage.getItem('selectedLanguage');
-                            const savedFlag = localStorage.getItem('selectedFlag');
-        
-                            if (savedLang && savedFlag) {
-                                // Ajusta a bandeira e o idioma automaticamente
-                                document.getElementById('selected-language').src = savedFlag;
-                                changeLanguage(savedLang, savedFlag, false); // O "false" evita a atualização do localStorage novamente
-                            }
-                        }
-        
-                        // Função para alterar o idioma e salvar a bandeira/idioma
-                        function changeLanguage(lang, flagSrc, save = true) {
-                            var translateElement = document.querySelector('.goog-te-combo');
-                            if (translateElement) {
-                                translateElement.value = lang;
-                                translateElement.dispatchEvent(new Event('change'));
-        
-                                // Atualiza a bandeira selecionada
-                                document.getElementById('selected-language').src = flagSrc;
-        
-                                // Salva o idioma e a bandeira no localStorage se necessário
-                                if (save) {
-                                    localStorage.setItem('selectedLanguage', lang);
-                                    localStorage.setItem('selectedFlag', flagSrc);
-                                }
-                            }
-                        }
+        <link rel="icon" href="imagens/favicon.png" type="image/png">
 
-                        function detectLanguage() {
-                    var langCode = document.documentElement.lang || navigator.language || navigator.userLanguage;
-
-                    switch (langCode) {
-                        case 'en':
-                            document.getElementById('selected-language').src = 'imagens/bandeiras/ingles.png';
-                            break;
-                        case 'es':
-                            document.getElementById('selected-language').src = 'imagens/bandeiras/espanhol.png';
-                            break;
-                        case 'zh-CN':
-                            document.getElementById('selected-language').src = 'imagens/bandeiras/chines.png';
-                            break;
-                        case 'ar':
-                            document.getElementById('selected-language').src = 'imagens/bandeiras/arabe.png';
-                            break;
-                        default:
-                            document.getElementById('selected-language').src = 'imagens/bandeiras/portugues.png';
-                            break;
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                // Cria o elemento de tradução do Google
+                new google.translate.TranslateElement({
+                    pageLanguage: 'pt',
+                    includedLanguages: 'en,es,pt,zh-CN,ar'
+                }, 'google_translate_element');
+        
+                // Recupera o idioma e a bandeira salvos no localStorage, se existirem
+                const savedLang = localStorage.getItem('selectedLanguage');
+                const savedFlag = localStorage.getItem('selectedFlag');
+        
+                if (savedLang && savedLang !== 'pt') {
+                    // Se houver um idioma salvo diferente de 'pt', aplicamos a tradução
+                    document.getElementById('selected-language').src = savedFlag;
+                    setTimeout(() => {
+                        changeLanguage(savedLang, savedFlag, false); // O "false" evita a atualização do localStorage novamente
+                        document.body.style.visibility = 'visible'; // Mostra o conteúdo da página após a tradução
+                    }, 1000);
+                } else {
+                    // Se não houver idioma salvo ou o idioma salvo for 'pt', mostramos a página imediatamente
+                    document.body.style.visibility = 'visible';
+                }
+            }
+        
+            // Função para alterar o idioma e salvar a bandeira/idioma
+            function changeLanguage(lang, flagSrc, save = true) {
+                var translateElement = document.querySelector('.goog-te-combo');
+                if (translateElement) {
+                    translateElement.value = lang;
+                    translateElement.dispatchEvent(new Event('change'));
+        
+                    // Atualiza a bandeira selecionada
+                    document.getElementById('selected-language').src = flagSrc;
+        
+                    // Salva o idioma e a bandeira no localStorage se necessário
+                    if (save) {
+                        localStorage.setItem('selectedLanguage', lang);
+                        localStorage.setItem('selectedFlag', flagSrc);
                     }
-                }  
+                }
+            }
         
-                        // Inicializa o Google Translate quando a página carrega
-                        window.onload = googleTranslateElementInit;
-                </script>
-                
-                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            // Inicializa o Google Translate quando a página carrega
+            window.onload = googleTranslateElementInit;
+        </script>
+        
+        <!-- Carrega o script de tradução do Google -->
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
     </head>
 
 <body>

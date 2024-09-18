@@ -382,23 +382,28 @@ body{
     padding-bottom: 50px;
     width: 70%;
 }
-/* primeira seção responsiva */
+/* primeira seção mobile MAIORES */
 @media (max-width: 768px) {
     .content {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
         padding: 0;
-        margin-left: 120px;
-        margin-right: 120px;
+        margin: auto;
         display: flex;
     }
 
     .box {
+        padding-left: 0;
         display: flex;
         flex-direction: column;
         width: 70vw;
         gap: 10px;
+
     }
 
     .bx-text {
+        display: flex;
         width: 70vw;
         align-content: center;
         align-items: center;
@@ -427,6 +432,9 @@ body{
         align-self: center;
     }
     .imagem {
+        display: flex;
+        align-items: center;
+        margin: auto;
         width: 100vw;
     }
 }
@@ -545,8 +553,12 @@ body{
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao cartão */
 }
 
-/* responsividade para dispositivos mobile e tablets */
+/* responsividade para dispositivos mobile MAIORES */
 @media (max-width: 768px) {
+    .hero-section {
+        padding: 0;
+    }
+
     .hero-title {
         font-size: 24px; 
         text-align: center;
@@ -580,6 +592,7 @@ body{
     }
 
     .card .back {
+        background: #fb8d48f7;
         padding: 10px; /* Ajusta o padding para textos mais curtos em telas menores */
         font-size: 14px; /* Ajusta o tamanho da fonte do texto de trás dos cards */
     }

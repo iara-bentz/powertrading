@@ -281,6 +281,45 @@ body{
     min-height: auto;
 }
 
+
+@media (min-width: 780px) and (max-width: 1200px){
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        border-radius: 0 0 10px 10px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links.active a {
+        color: #000; /* Muda a cor dos links para preto quando o menu está aberto */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .logo img {
+        width: max-content; /* Aumenta a responsividade para telas menores */
+        max-width: 150px; /* Ajuste o máximo para telas pequenas */
+    }
+}
+
 @media (max-width: 768px) {
     #navbar {
         background-color: #fff;

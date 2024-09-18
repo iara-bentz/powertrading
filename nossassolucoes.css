@@ -279,7 +279,45 @@ body{
     font-size: 1.2rem;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 780px) and (max-width: 1200px){
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        border-radius: 0 0 10px 10px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links.active a {
+        color: #000; /* Muda a cor dos links para preto quando o menu está aberto */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .logo img {
+        width: max-content; /* Aumenta a responsividade para telas menores */
+        max-width: 150px; /* Ajuste o máximo para telas pequenas */
+    }
+}
+
+@media (max-width: 779px) {
     #navbar {
         background-color: #fff;
         z-index: 200;
@@ -562,21 +600,26 @@ body{
 }
 
 
-/* Responsivo para telas menores */
-@media (max-width: 768px) {
+
+/* Responsivo mobile MAIORES */
+@media (max-width: 779px) {
+    .capa {
+        visibility: hidden;
+    }
     .exportações h2 {
         padding-left: 30px;
     }
 
     .conteudo {
-        border-top: 3px solid #ff913d;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-top: 0px;
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
         margin-top: 0vh; /* Ajuste conforme necessário para garantir que a `conteudo` comece abaixo da capa */
         background-color: #fff;
         position: relative;
-        min-height: calc(100vh - 40px);
-        overflow: auto;
+        overflow-x: none;
     }
     .capa {
         width: 100vw;
@@ -592,9 +635,13 @@ body{
     }
 
     .texto-operações {
+        margin-left: 20px;
+        margin-right: 20px;
+        justify-content: center;
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        width: auto;
     }
 
     .texto-operações h2 {
@@ -624,14 +671,14 @@ body{
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
-        width: 90vw;
+        width: auto;
         margin-left: 20px;
         margin-right: 20px;
     }
 
 
     .cards-container {
-        width: 90vw;
+        width: auto;
         margin-left: 20px;
         margin-right: 20px;
     }

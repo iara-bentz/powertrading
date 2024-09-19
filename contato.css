@@ -660,22 +660,17 @@ button img {
     }
 }
 
+
 .custom-footer {
-    z-index: 300;
+    z-index: 100;
     background-color: #000;
     background-size: cover;
     background-position: center;
     font-family: 'Heebo';
-    padding: 60px 60px 20px 60px; /* Reduza o padding superior e inferior para diminuir a altura */
+    padding: 60px 60px 20px 60px; 
     color: #ffffff;
     color: white;
 }
-
-
-.footer-column-img {
-    translate: 0 -30px;
-}
-
 
 .line {
     border-top: 0.5px solid white;
@@ -692,26 +687,23 @@ button img {
     justify-content: space-between;
     display: flex;
     margin-bottom: 30px;
-    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    align-items: flex-start; 
 }
 
 .footer-column {
-    width: 22%; /* Quatro colunas com espaço entre elas */
+    width: 22%; 
     text-align: left; 
 }
 
 .footer-column-img img {
     display: block;
-    margin: 0 auto 10px auto; /* Centralizar as imagens na coluna */
+    margin: 0 auto 10px auto; 
 }
 
 .footer-column-img .logo {
-    width: 60%;
+    width: 250px;
 }
 
-.footer-column-img .iso {
-    width: 45%;
-}
 
 .footer-column ul {
     font-weight: 500;
@@ -738,22 +730,22 @@ button img {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0px;
-    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    align-items: flex-start; 
 }
 
 .footer-column {
     font-size: 18px;
-    width: 22%; /* Quatro colunas com espaço entre elas */
+    width: 22%;
     text-align: left; 
-    margin-top: 0px; /* Adiciona espaço na parte superior */
+    margin-top: 0px; 
 }
 
 
 .footer-column-p p {
     font-size: 18px;
     text-align: left;
-    font-weight: 400;
-    line-height: 0.7; /* Ajusta o espaçamento entre linhas para maior legibilidade */
+    font-weight: 200;
+    line-height: 1.2; 
 }
 
 
@@ -761,25 +753,25 @@ button img {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Espaçamento entre os ícones e as linhas */
-    padding-left: 20px; /* Mesmo padding da linha de cima */
-    padding-right: 20px; /* Mesmo padding da linha de cima */
+    gap: 10px; 
+    padding-left: 20px; 
+    padding-right: 20px; 
 }
 
 .social-lines hr {
-    flex-grow: 1; /* Faz com que as linhas cresçam para preencher o espaço disponível */
+    flex-grow: 1; 
     border: 0;
     border-top: 1px solid white;
-    margin: 0; /* Remove margin extra para garantir alinhamento */
+    margin: 0; 
 }
 
 .social-icons {
     display: flex;
-    gap: 0px; /* Espaçamento entre os ícones */
+    gap: 0px; 
 }
 
 .social-icons a img {
-    width: 34px; /* Ajuste o tamanho conforme necessário */
+    width: 34px; 
     height: auto;
 }
 
@@ -789,12 +781,12 @@ button img {
     margin: 0 10px;
     font-size: 24px;
     text-decoration: none;
-    transition: transform 0.5s ease, filter 0.5s ease; /* Suaviza a transição */
+    transition: transform 0.5s ease, filter 0.5s ease; 
 }
 
 .social-icons a img:hover {
-    transform: scale(1.2); /* Aumenta o tamanho do ícone */
-    filter: brightness(1.5); /* Aumenta o brilho para destacar */
+    transform: scale(1.2); 
+    filter: brightness(1.5); 
 }
 
 .footer-tagline {

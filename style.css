@@ -626,8 +626,8 @@ section .banner{
         margin-left: 0;
         font-weight: 800;
         width: 80vw;
-        font-size: 32px;
-        line-height: 36px;
+        font-size: 30px;
+        line-height: 32px;
     }
 
     .newsletter-bar {
@@ -736,9 +736,6 @@ conteudo {
     margin: 0;
   }
   
-
-
-/* mobile mapa*/
 @media (min-width: 300px) and (max-width: 780px) {
     .map-text {
         background-position: center;
@@ -750,10 +747,6 @@ conteudo {
         margin-right: 20px;
     }
 
-    .map-text .title {
-        font-size: 26px;
-        width: 80%;
-    }
 
     .map-text p {
         padding-top: 1  0px;
@@ -800,6 +793,7 @@ conteudo {
 
     }
 }
+
 .globo {
     position: relative;
     width: 100%;
@@ -818,10 +812,10 @@ conteudo {
     align-items: center;
     justify-content: center;
     z-index: 1;
-    background-image: url('imagens/globo (3).gif');
     background-size: cover; /* Faz a imagem cobrir o contêiner sem distorcer */
     background-position: right; /* Alinha a imagem à direita do contêiner */
     background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-color: #12001B;
 }
 
 .video-globo {
@@ -845,7 +839,7 @@ conteudo {
     top: 50%;
     left: 50px; /* Espaçamento à esquerda */
     transform: translateY(-50%); /* Centraliza verticalmente em relação ao vídeo */
-    z-index: 3; /* Garante que o conteúdo fique sobre o vídeo e o overlay */
+    z-index: 30; /* Garante que o conteúdo fique sobre o vídeo e o overlay */
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Alinha os itens à esquerda */
@@ -907,15 +901,13 @@ conteudo {
 }
 
 .imagem-globo {
-    display: none; /* Esconder o GIF */
-    width: auto;
-    height: 100%;
+    display: none; 
+    width: 100vw;
+    height: auto;
     position: absolute;
     top: 0;
-    right: 0; /* Posiciona a imagem à direita do contêiner */
-    object-fit: cover; /* Faz a imagem cobrir o contêiner sem distorcer */
-    object-position: right; /* Ajusta a imagem para exibir o lado direito */
-    z-index: 1;
+    object-fit: cover; 
+    z-index: 15;
 }
 
 .imagem-wrapper {
@@ -931,6 +923,17 @@ conteudo {
 }
 
 @media (min-width: 780px) {
+    .globo .video-globo {
+        display: block;
+        z-index: 100;
+        width: 100vw;
+        height: auto;
+    }
+
+    .imagem-globo {
+        display: none;
+        visibility: hidden;
+    }
     .cta {
         width: 70%;
         margin-left: 75px;
@@ -942,26 +945,32 @@ conteudo {
 
 /* mobile MAIOR seção globo */
 @media (min-width: 480px) and (max-width: 780px) {
+    
     .globo {
-        height: 100%;
+        background-color: #12001B;
+        height: 500px;
     }
 
     .video-background {
-        height: 100%;
+        height: auto;
+        width: 100vw;
     }
 
     .video-globo {
-        display: none; /* Esconder o vídeo */
+        display: none;
     }
 
     .imagem-globo {
-        display: block; /* Mostrar o GIF */
+        display: block; 
+        width: 100%;
+        height: auto;
     }
 
     .cta {
         width: 70%;
         margin-left: 75px;
-        margin-right: 20px;
+        margin-right: 30px;
+        padding-right: 30px;
         padding: 0 10px;
     }
 
@@ -973,21 +982,26 @@ conteudo {
 }
 
 /* mobile MENOR seção globo */
-@media (min-width: 300px) and (max-width: 480px) {
-    .globo {
-        height: 100%;
+@media (min-width: 280px) and (max-width: 480px) {
+    
+    .map-text .title {
+        font-size: 26px;
+        width: 80%;
     }
-
-    .video-background {
-        height: 100%;
+    
+    .globo {
+        background-color: #12001B;
+        height: 500px;
     }
 
     .video-globo {
-        display: none; /* Esconder o vídeo */
+        display: none;
     }
 
     .imagem-globo {
-        display: block; /* Mostrar o GIF */
+        display: block; 
+        width: 100%;
+        height: auto;
     }
 
     .cta {
@@ -999,12 +1013,12 @@ conteudo {
 
     .cta h2 {
         margin-right: 20px;
-        font-size: 32px;
+        font-size: 30px;
         line-height: 35px;
     }
 
     .cta button {
-        width: 120px;
+        width: 100px;
         font-size: 10px;
         font-weight: 500;
         border: 0.5px solid;
@@ -1174,8 +1188,8 @@ conteudo {
   }
 
   @media (min-width: 300px) and (max-width: 480px) {
-    .title {
-        font-size: 32px;
+    .map-text .title {
+        font-size: 30px;
     }
 
     .subtitle {
@@ -1210,12 +1224,6 @@ conteudo {
     color: white;
 }
 
-
-.footer-column-img {
-    translate: 0 -30px;
-}
-
-
 .line {
     border-top: 0.5px solid white;
     margin-bottom: 0px;
@@ -1245,12 +1253,9 @@ conteudo {
 }
 
 .footer-column-img .logo {
-    width: 60%;
+    width: 250px;
 }
 
-.footer-column-img .iso {
-    width: 45%;
-}
 
 .footer-column ul {
     font-weight: 500;
@@ -1411,4 +1416,3 @@ conteudo {
         align-self: center;
     }
 }
-

@@ -371,7 +371,7 @@ body{
     position: absolute;
     position: relative;
     width: 100vw;
-    height: 62vh;
+    height: auto;
     overflow: hidden;
 }
 
@@ -523,7 +523,6 @@ body{
     width: 250px;
     height: 400px;
     perspective: 1000px; 
-    cursor: pointer;
 }
 
 .card-front, .card-back {
@@ -599,7 +598,17 @@ body{
     font-size: 1rem;
 }
 
+@media (min-width: 780px) and (max-width: 1200px){
+    .capa{
+        height: auto;
+    }
 
+    .cards-container2 {
+        gap: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
 
 /* Responsivo mobile MAIORES */
 @media (max-width: 779px) {
@@ -665,15 +674,13 @@ body{
     }
 
     .cards-container2 {
-        margin-left: 0;
-        margin-right: 0
+        margin-left: 20px;
+        margin-right: 20px;
         padding-bottom: 60px;
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
         width: auto;
-        margin-left: 20px;
-        margin-right: 20px;
     }
 
 
@@ -712,6 +719,7 @@ body{
     }
 }
 
+
 .custom-footer {
     background-color: #000;
     background-size: cover;
@@ -721,12 +729,6 @@ body{
     color: #ffffff;
     color: white;
 }
-
-
-.footer-column-img {
-    translate: 0 -30px;
-}
-
 
 .line {
     border-top: 0.5px solid white;
@@ -757,12 +759,9 @@ body{
 }
 
 .footer-column-img .logo {
-    width: 60%;
+    width: 250px;
 }
 
-.footer-column-img .iso {
-    width: 45%;
-}
 
 .footer-column ul {
     font-weight: 500;
@@ -803,8 +802,8 @@ body{
 .footer-column-p p {
     font-size: 18px;
     text-align: left;
-    font-weight: 400;
-    line-height: 0.7; /* Ajusta o espaçamento entre linhas para maior legibilidade */
+    font-weight: 200;
+    line-height: 0.2; /* Ajusta o espaçamento entre linhas para maior legibilidade */
 }
 
 

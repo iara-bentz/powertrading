@@ -173,6 +173,8 @@ body{
     height: auto; /* Mantém a proporção da imagem */
 }
 
+
+
 .nav-links {
     white-space: nowrap;
     width: auto;
@@ -185,6 +187,7 @@ body{
 
 .nav-links li {
     margin-left: 30px;
+    position: relative; /* Necessário para o posicionamento correto do ::after */
 }
 
 .nav-links a {
@@ -194,14 +197,33 @@ body{
     font-weight: 350;
     font-size: 1rem;
     padding: 5px 10px;
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+    position: relative; /* Isso é importante para que o ::after seja relativo ao link */
 }
 
 .nav-links a:hover {
-    color: #fff;
-    background-color: #ff6347;
-    border-radius: 5px;
+    color: #ff7104;
 }
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #ff7104; 
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links a.active {
+    color: #ff7104; 
+}
+
+.nav-links a:hover::after {
+    width: 100%; 
+}
+
 
 .hamburger .line {
     width: 30px;

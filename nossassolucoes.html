@@ -89,7 +89,7 @@
         </div>
         <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Início</a></li>
-            <li><a href="nossassolucoes.html">Nossas Soluções</a></li>
+            <li><a href="nossassolucoes.html" class="active">Nossas Soluções</a></li>
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="ondeestamos.html">Onde Estamos</a></li>
             <li><a href="contato.html">Contato</a></li>
@@ -114,7 +114,7 @@
 
     <main>
         <div class="capa">                
-            <img src="imagens/navio-capa.jpg" class="logo" alt="Logo">
+            <img src="imagens/navio-capa.jpg" class="logo" alt="Imagem Navio">
         </div>
         <div class="conteudo">
             <div class="texto-operações">
@@ -129,7 +129,7 @@
                     </p>
                 </div>
                 <div class="card">
-                    <div class="gif"><img src="imagens/contaesolici.gif" alt="ícones criados por Freepik - Flaticon"></div>
+                    <div class="gif"><img src="imagens/personalizada.gif" alt="ícones criados por Freepik - Flaticon"></div>
                     <h2>EXPORTAÇÃO PERSONALIZADA </h2>
                     <p>Facilitamos toda a logística de exportação, adaptando cada envio às necessidades dos clientes, com frota própria e armazéns estratégicos.</p>
                 </div>
@@ -140,13 +140,13 @@
                     <p>Asseguramos que nossos processos atendam a rigorosas regulamentações internacionais, garantindo segurança e conformidade.</p>
                 </div>
                 <div class="card">
-                    <div class="gif"><img src="imagens/alvo.gif" alt="ícones criados por Freepik - Flaticon"></div>
+                    <div class="gif"><img src="imagens/financiamento.gif" alt="ícones criados por Freepik - Flaticon"></div>
                     <h2>OPERAÇÃO FINANCEIRA</h2>
                     <p>Facilitamos financiamento global personalizado através de bancos parceiros, viabilizando negociações de grande escala.
                     </p>
                 </div>
                 <div class="card">
-                    <div class="gif"><img src="imagens/alvo.gif" alt="ícones criados por Freepik - Flaticon"></div>
+                    <div class="gif"><img src="imagens/partners.gif" alt="ícones criados por Freepik - Flaticon"></div>
                     <h2>PARCERIAS GLOBAIS ESTRATÉGICAS
                     </h2>
                     <p>Estabelecemos parcerias sólidas que garantem segurança, qualidade e eficiência em toda a cadeia de suprimentos.
@@ -159,18 +159,19 @@
                     <p>Implementamos rigorosos controles em todas as fases de aquisição, assegurando altos padrões de qualidade.                    </p>
                 </div>
                 <div class="card">
-                    <div class="gif"><img src="imagens/fornecimento-global.gif" alt="ícones criados por Freepik - Flaticon"></div>
+                    <div class="gif"><img src="imagens/suporte.gif" alt="ícones criados por Freepik - Flaticon"></div>
                     <h2>CONSULTORIA ESPECIALIZADA
                     </h2>
                     <p>Nossa equipe oferece consultoria personalizada para maximizar lucros no comércio de commodities.                    </p>
                 </div>
                 <div class="card">
-                    <div class="gif"><img src="imagens/fornecimento-global.gif" alt="ícones criados por Freepik - Flaticon"></div>
+                    <div class="gif"><img src="imagens/foguete.gif" alt="ícones criados por Freepik - Flaticon"></div>
                     <h2>PROCESSO ADUANEIRO SIMPLIFICADO
                     </h2>
                     <p>Facilitamos importação e exportação com expertise em regulamentações globais, garantindo processos rápidos e seguros.
                     </p>
                 </div>
+                
             </div> 
                 <div class="texto-operações">
                     <h2>CONHEÇA NOSSA SELEÇÃO DE COMMODITES</h2>
@@ -202,6 +203,12 @@
                         <div class="card-front">
                             <img src="imagens/milho.png" alt="Milho">
                             <div class="label">Milho</div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="card-front">
+                            <img src="imagens/fertilizantes.png" alt="Fertilizantes">
+                            <div class="label">Fertilizantes</div>
                         </div>
                     </div>
                 </div> 
@@ -255,6 +262,7 @@
             </div>
         </div>
     </footer>
+
     <script>
         window.onscroll = function() {
             var navbar = document.getElementById("navbar");
@@ -264,15 +272,15 @@
                 navbar.classList.remove("scrolled");
             }
         };
-    
+
             document.addEventListener("DOMContentLoaded", function() {
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("nav-links");
-    
+
     hamburger.addEventListener("click", function() {
         navLinks.classList.toggle("active");
     });
-    });
+});
     </script>
     
     <script src="nossassolucoes.js"></script>

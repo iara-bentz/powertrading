@@ -131,7 +131,7 @@
         </div>
         <div class="right">
             <div class="form-box">
-                <form action="http://localhost:3000/enviar-email" method="POST">
+                <form id="contact-form" action="enviar_email.php" method="POST">
                     <div class="name-fields">
                         <div class="field-group">
                             <label for="first-name">Primeiro Nome*</label>
@@ -153,18 +153,25 @@
                     <textarea id="message" name="message" required></textarea>
             
                     <div class="btn">
-                        <label>Este site é protegido por reCAPTCHA. A política de privacidade e os termos de serviço do Google aplicam-se.</label>
                         <button type="submit">
                             <img src="imagens/seta-direita.png" alt="Seta">Mandar mensagem
                         </button>
                     </div>
+
+                    <div id="success-message" style="display:none; color: green;"></div>
+                    <div id="error-message" style="display:none; color: red;"></div>
                 </form>
-            
             
                 <video src="videos/contato.mp4" autoplay muted></video>
             </div>
+            <div id="notification-modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <p id="notification-message"></p>
+                </div>
+            </div>
+        </div>
         </section>
-
 
         <footer class="custom-footer">
             <div class="line"></div>
@@ -213,6 +220,7 @@
             </div>
         </footer>
 
+        
 <script>
     window.onscroll = function() {
         var navbar = document.getElementById("navbar");
@@ -232,5 +240,8 @@ hamburger.addEventListener("click", function() {
 });
 });
 </script>
+<script src="contato.js"></script>
+
+
 </body>
 </html>    

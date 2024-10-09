@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const languageDropdown = document.querySelector('.language-dropdown');
     const languageSelected = document.querySelector('.language-selected');

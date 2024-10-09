@@ -508,6 +508,48 @@ body {
     transform: translateY(0); 
 }
 
+/* Style the modal */
+#notification-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#notification-message.alert-success {
+    color: green; /* Or any style you prefer for success */
+}
+
+#notification-message.alert-danger {
+    color: red; /* Or any style you prefer for errors */
+}
+
+#notification-modal {
+    opacity: 0; /* Initially transparent */
+    pointer-events: none; /* Prevents clicks while hidden */
+}
+
+
 input[type="text"], input[type="email"], textarea {
     border: none;
     border-bottom: 0.5px solid #333333; /* Linha inferior */

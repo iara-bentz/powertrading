@@ -56,6 +56,10 @@ body {
     top: 0px !important;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 .tradingview-widget-container {
     margin-bottom: 20px;
     background-color: #fff;
@@ -373,7 +377,7 @@ body {
 
 
 section .banner{  
-    margin-top: 90px; 
+    margin-top: 0; 
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -387,6 +391,7 @@ section .banner{
     position: relative;
     z-index: 2;
     justify-items: left;
+    margin-top: 50px;
 }
 
 .content-h1-newsletter {
@@ -808,9 +813,7 @@ conteudo {
         font-size: 28px;
     }
 
-    .card p {
 
-    }
 }
 
 .globo {
@@ -1269,7 +1272,7 @@ conteudo {
 }
 
 .footer-column-img .logo {
-    width: 250px;
+    width: 190px;
 }
 
 

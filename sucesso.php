@@ -125,7 +125,7 @@
     <div class="container">
         <h1>Mensagem Enviada!</h1>
         <p>Sua mensagem foi enviada com sucesso. A nossa equipe agradece e entrará em contato!</p>
-        <a href="index.html" class="btn">Voltar ao início</a>
+        <a href="index.html" class="btn">Voltar para Homepage</a>
     </div>
     </div>
     

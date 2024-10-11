@@ -1,21 +1,5 @@
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const languageDropdown = document.querySelector('.language-dropdown');
-    const languageSelected = document.querySelector('.language-selected');
-
-    languageSelected.addEventListener('click', () => {
-        languageDropdown.classList.toggle('active');
-    });
-
-    // Fecha o dropdown quando clica fora dele
-    document.addEventListener('click', (event) => {
-        if (!languageDropdown.contains(event.target)) {
-            languageDropdown.classList.remove('active');
-        }
-    });
-});
-
 function toggleMenu() {
     const mobileMenu = document.getElementById('mobile-menu');
     const hamburger = document.getElementById('hamburger');
